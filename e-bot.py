@@ -106,9 +106,9 @@ source=[
 ]
 math_probs=[
     'koink.png',
-    'koink1.png',
-    'koink2.png',
-    'koink4.png'
+    'koinktwo.png',
+    'koinkthree.png',
+    'koinkfour.png'
 ]
 math_answers=[
     'answer- ||90 ||',
