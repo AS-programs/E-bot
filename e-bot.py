@@ -194,7 +194,7 @@ async def math(ctx):
 async def mathprob(ctx):
     x=len(math_probs)
     y = random.randint(0,x-1)
-    await ctx.send(source[y])
+    await ctx.send(source(y))
     await ctx.send(file=discord.File(math_probs[y]))
     await ctx.send(math_answers[y])
 
