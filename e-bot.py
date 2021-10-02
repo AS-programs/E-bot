@@ -98,7 +98,7 @@ tie_game=[
     'ufffff close,its a tie'
 ]
 
-source=[
+sourcee=[
     'source - mind your decisions (youtube)',
     'source - michael penn (youtube)',
     'source - michael penn (youtube)',
@@ -194,7 +194,7 @@ async def math(ctx):
 async def mathprob(ctx):
     x=len(math_probs)
     y = random.randint(0,x-1)
-    await ctx.send(source[y])
+    await ctx.send(sourcee[y])
     await ctx.send(file=discord.File(math_probs[y]))
     await ctx.send(math_answers[y])
 
