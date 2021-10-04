@@ -34,9 +34,11 @@ wordd=[
     'abberation : a departure from what is normal, usual, or expected, typically an unwelcome one\nExample-they described the outbreak of violence in the area as an aberration',
     'abnegation : the action of renouncing or rejecting something \nExample-abnegation of political power',
     'apathetic : showing or feeling no interest, enthusiasm, or concern.\nExample-an apathetic electorate',
+    'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
     'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
+    'comply : act in accordance with a wish or command\nExample-we are unable to comply with your request',
     'consign : deliver (something) to a persons keeping.\nExample-he consigned three paintings to Sotheby',
     'construed : interpret (a word or action) in a particular way\nExample-his words could hardly be construed as an apology',
     'contusion : a region of injured tissue or skin in which blood capillaries have been ruptured; a bruise\nExample-a dark contusion on his cheek was beginning to swell',
@@ -49,6 +51,7 @@ wordd=[
     'equanimity : calmness and composure, especially in a difficult situation\nExample-she accepted both the good and the bad with equanimity',
     'exhort : strongly encourage or urge (someone) to do something\nExample-I exhorted her to be a good child',
     'exigent : pressing; demanding\nExample-the exigent demands of her contemporaries music took a toll on her voice',
+    'gullible : easily persuaded to believe something; credulous.\nExample-an attempt to persuade a gullible public to spend their money',
     'hoi polloi : the masses; the common people\nExample-the politician decreased the taxes to appease the hoi polloi',
     'ignominious : deserving or causing public disgrace or shame\nExample-no other party risked ignominious defeat',
     'impetuous : acting or done quickly and without thought or care \nExample-she might live to regret this impetuous decision',
@@ -78,7 +81,10 @@ wordd=[
 microbes=[
     "Rhinovirus\nType:virus\nDisease:Common cold",
     "AIDS(Acquired Immunodeficiency Disease)\nType:virus\nDisease:HIV(Human Immunodeficiency Disease)",
-    "Salmonella Typhi\nType:bacteria\nDisease:Typhoid"
+    "Salmonella Typhi\nType:bacteria\nDisease:Typhoid",
+    "Vibrio Cholerae\nType:Bacteria\nDisease:Cholera",
+    "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
+    "Varicella Zoster virus\nType:virus\nDisease:Chickenpox"
 ]
 
 
@@ -130,8 +136,7 @@ async def on_ready():
 
 @client.command()
 async def help(ctx):
-    await ctx.send(
-        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be i integer form for example-\n``$event 14 6`` gives the events on 23rd may. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
+    await ctx.send("$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be i integer form for example-\n``$event 14 6`` gives the events on 23rd may. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
 
 
 @client.command()
@@ -148,6 +153,7 @@ async def inspire(ctx):
 @client.command()
 async def word(ctx):
     await ctx.send(random.choice(wordd))
+
 
 @client.command()
 async def microbe(ctx):
@@ -232,8 +238,7 @@ async def exponent(ctx, x: float, y: float):
 
 @client.command()
 async def randnum(ctx, x: float, y: float):
-    res=random.randint(x,y)
-    await ctx.send(res)
+    await ctx.send(random.randint(x,y))
 
 @client.command()
 async def count(ctx, s: int):
@@ -254,7 +259,7 @@ async def source(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more english words to the $word list(current number of english words {len(wordd)})\nworking on a new command :eyes:\n-developer of e-bot")
+    await ctx.send(f"added more english words to the $word list(current number of english words {len(wordd)})\added a microbe :microbe: command\n-developer of e-bot")
     
     
     
