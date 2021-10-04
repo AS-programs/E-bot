@@ -259,7 +259,7 @@ async def source(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more english words to the $word list(current number of english words {len(wordd)})\added a microbe :microbe: command\n-developer of e-bot")
+    await ctx.send(f"added more english words to the $word list(current number of english words {len(wordd)})\nadded a microbe :microbe: command\n-developer of e-bot")
     
     
     
