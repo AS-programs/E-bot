@@ -1,5 +1,5 @@
 import discord
-import math
+import math as meth
 import os 
 import dotenv
 import requests
@@ -193,8 +193,7 @@ async def rps(ctx,inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send(
-        "$<operation> <number 1> <number 2> \n the operations are- add,subtract,multiply,divide,exponent(for example- ``$exponent 2 5`` means 2 to the power 5),randnum(for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers) \n $count <integer>(gives all the integers before the given number till 0)")
+    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)")       
 
 @client.command()
 async def mathprob(ctx):
@@ -237,17 +236,32 @@ async def exponent(ctx, x: float, y: float):
             break
 
 @client.command()
-async def randnum(ctx, x: float, y: float):
-    await ctx.send(random.randint(x,y))
+async def cos(ctx,x:float):
+    await ctx.send(meth.cos(x))
 
 @client.command()
-async def count(ctx, s: int):
-    if s < 51:
-        for s in range(1, s):
-            await ctx.send(s)
-    else:
-        await ctx.send("cant put numbers above 50")
-        
+async def sin(ctx,x:float):
+    await ctx.send(meth.sin(x))
+
+@client.command()
+async def tan(ctx,x:float):
+    await ctx.send(meth.tan(x))
+
+@client.command()
+async def sec(ctx,x:float):
+    await ctx.send(1/math.cos(x))
+
+@client.command()
+async def cosec(ctx,x:float):
+    await ctx.send(1/math.sin(x))
+
+@client.command()
+async def cot(ctx,x:float):
+    await ctx.send(1/math.tan(x))
+
+@client.command()
+async def randnum(ctx, x: float, y: float):
+    await ctx.send(random.randint(x,y))
 
 @client.command()
 async def extras(ctx):
