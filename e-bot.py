@@ -34,6 +34,7 @@ wordd=[
     'abberation : a departure from what is normal, usual, or expected, typically an unwelcome one\nExample-they described the outbreak of violence in the area as an aberration',
     'abnegation : the action of renouncing or rejecting something \nExample-abnegation of political power',
     'apathetic : showing or feeling no interest, enthusiasm, or concern.\nExample-an apathetic electorate',
+    'arbitrary :based on random choice or personal whim, rather than any reason or system\nExample-an arbitrary decision'
     'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
@@ -84,7 +85,12 @@ microbes=[
     "Salmonella Typhi\nType:bacteria\nDisease:Typhoid",
     "Vibrio Cholerae\nType:Bacteria\nDisease:Cholera",
     "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
-    "Varicella Zoster virus\nType:virus\nDisease:Chickenpox"
+    "Varicella Zoster virus\nType:virus\nDisease:Chickenpox",
+    "Yersinia Pestis\nType:bacteria\nDisease-Black Plague",
+    "Variola virus\nType:virus\nDisease:Smallpox",
+    "Epstein-Barr virus\nType:virus\nDisease:Mononucleosis",
+    "Typhoid\nType:bacteria\nDisease:Salmonella Typhi",
+    "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis"
 ]
 
 
@@ -193,7 +199,7 @@ async def rps(ctx,inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)")       
+    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - cos/sin/tan/cot/cosec/sec <number>")       
 
 @client.command()
 async def mathprob(ctx):
@@ -273,7 +279,7 @@ async def source(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more english words to the $word list(current number of english words {len(wordd)})\nadded a microbe :microbe: command\n-developer of e-bot")
+    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nfixed math help command\n-developer of e-bot")
     
     
     
