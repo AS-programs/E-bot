@@ -199,7 +199,7 @@ async def rps(ctx,inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - cos/sin/tan/cot/cosec/sec <number>")       
+    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>")       
 
 @client.command()
 async def mathprob(ctx):
