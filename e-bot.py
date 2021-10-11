@@ -121,7 +121,9 @@ math_probs=[
     'math_probs\koinktwo.png',
     'math_probs\koinkthree.png',
     'math_probs\koinkfour.png'
+
 ]
+
 math_answers=[
     'answer- ||90 ||',
     'answer - ||n=2,3||',
