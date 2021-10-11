@@ -114,13 +114,19 @@ sourcee=[
     'source - mind your decisions (youtube)',
     'source - michael penn (youtube)',
     'source - michael penn (youtube)',
-    'source - general question'
+    'source - general question',
+    'source - some math textbook',
+    'source - michael penn (youtube)',
+    'source - some math textboo'
 ]
 math_probs=[
     'math_probs/koink.png',
     'math_probs/koinktwo.png',
     'math_probs/koinkthree.png',
-    'math_probs/koinkfour.png'
+    'math_probs/koinkfour.png',
+    'math_probs/koinkfive.png',
+    'math_probs/koinksix.png',
+    'math_probs/koinkseven.png'
 
 ]
 
@@ -128,7 +134,10 @@ math_answers=[
     'answer- ||90 ||',
     'answer - ||n=2,3||',
     'answer - ||12-4e||',
-    'answer - ||pi     ||'
+    'answer - ||pi     ||',
+    'answer - ||root pi||',
+    'answer - ||ln(e^x/(e^x+1))||',
+    'answer - ||x= 1 or -1||'
 ]
 
 
@@ -201,7 +210,7 @@ async def rps(ctx,inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)")       
+    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)")       
 
 @client.command()
 async def mathprob(ctx):
@@ -281,7 +290,7 @@ async def source(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nfixed math help command\n-developer of e-bot")    
+    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nfixed math help command\nfinally added mathprob command :partying_face:\n-developer of e-bot")    
     
     
 @client.command()
