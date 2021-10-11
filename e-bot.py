@@ -117,10 +117,10 @@ sourcee=[
     'source - general question'
 ]
 math_probs=[
-    'D:\AS\programmiing\projects\e-bot\E-bot\math_probs\koink.png',
-    'D:\AS\programmiing\projects\e-bot\E-bot\math_probs\koinktwo.png',
-    'D:\AS\programmiing\projects\e-bot\E-bot\math_probs\koinkthree.png',
-    'D:\AS\programmiing\projects\e-bot\E-bot\math_probs\koinkfour.png'
+    'D:/AS/programmiing/projects/e-bot/E-bot/math_probs/koink.png',
+    'D:/AS/programmiing/projects/e-bot/E-bot/math_probs/koinktwo.png',
+    'D:/AS/programmiing/projects/e-bot/E-bot/math_probs/koinkthree.png',
+    'D:/AS/programmiing/projects/e-bot/E-bot/math_probs/koinkfour.png'
 ]
 math_answers=[
     'answer- ||90 ||',
