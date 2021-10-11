@@ -255,15 +255,15 @@ async def tan(ctx,x:float):
 
 @client.command()
 async def sec(ctx,x:float):
-    await ctx.send(1/math.cos(x))
+    await ctx.send(1/meth.cos(x))
 
 @client.command()
 async def cosec(ctx,x:float):
-    await ctx.send(1/math.sin(x))
+    await ctx.send(1/meth.sin(x))
 
 @client.command()
 async def cot(ctx,x:float):
-    await ctx.send(1/math.tan(x))
+    await ctx.send(1/meth.tan(x))
 
 @client.command()
 async def randnum(ctx, x: float, y: float):
