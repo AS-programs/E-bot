@@ -117,10 +117,10 @@ sourcee=[
     'source - general question'
 ]
 math_probs=[
-    'math_probs\koink.png',
-    'math_probs\koinktwo.png',
-    'math_probs\koinkthree.png',
-    'math_probs\koinkfour.png'
+    'math_probs/koink.png',
+    'math_probs/koinktwo.png',
+    'math_probs/koinkthree.png',
+    'math_probs/koinkfour.png'
 
 ]
 
