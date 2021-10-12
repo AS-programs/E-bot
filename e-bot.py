@@ -26,7 +26,9 @@ hello_words=[
     'hello there e-bot here',
     'hello i am a bot :robot:',
     'hi',
-    ':person_raising_hand:'
+    ':person_raising_hand:',
+    'hello there',
+    'hey there'
 ]
 
 
@@ -38,6 +40,7 @@ wordd=[
     'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
+    'callous : showing or having an insensitive and cruel disregard for others.\nExample-his callous comments about the murder made me angry',
     'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
     'comply : act in accordance with a wish or command\nExample-we are unable to comply with your request',
     'consign : deliver (something) to a persons keeping.\nExample-he consigned three paintings to Sotheby',
@@ -46,6 +49,8 @@ wordd=[
     'defunct : no longer existing or functioning \nExample - the now defunct Somerset & Dorset railway line',
     'dilatory : slow to act\nExample-he had been dilatory in preparing for his exams',
     'dirge : a mournful song, piece of music, or sound.\nExample-singers chanted dirges',
+    'disparate : essentially different in kind; not able to be compared\nExample-they inhabit disparate worlds of thought',
+    'dispel : make (a doubt, feeling, or belief) disappear\nExample-The breeze dispelled the bad odor',
     'embezzlement : theft or misappropriation of funds placed in ones trust or belonging to ones employer\nExample-charges of fraud and embezzlement',
     'emulate : match or surpass (a person or achievement)\nExample-most rulers wished to emulate Alexander the Great',
     'enormity : the scale or extent of something percieved as bad or morally wrong\nExample-a thorough search disclosed the full enormity of the crime',
@@ -60,12 +65,14 @@ wordd=[
     'inchoate : just begun so not yet fully developed\nExample-a still inchoate democracy',
     'indefatigable : persisting continuosly and tirelessly\nExample-an indefatigable defender of human rights',
     'infringe : actively break the terms of (a law, agreement, etc.) \nExample-making an unauthorized copy would infringe copyright',
+    'inveterate : having a particular habit, activity, or interest that is long-established and unlikely to change\nExample-an inveterate gambler ',
     'martinate : a person who demands complete obedience; a strict disciplinarian\nExample-a martinant dictator ruled the kingdom',
     'mores : the essential or characteristic customs and conventions of a society or community\nExample-an offence against social mores',
     'munificent : characterized by or displaying great generosity\nExample-a munificent bequest',
     'nonplussed : so surprised and confused that one is unsure how to react.\nExample-Henry looked completely nonplussed',
     'noxious : harmful, poisonous, or very unpleasant\nExample-they were overcome by the noxious fumes',
-    'paradigm : a typical example or pattern of something,\nExampleThe object-oriented paradigm is a new and different way of thinking about programming',
+    'paradigm : a typical example or pattern of something,\nExample-The object-oriented paradigm is a new and different way of thinking about programming',
+    'phlegmatic : (of a person) having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character'
     'phlogmatic : having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
     'portent : a sign or warning that a momentous or calamitous event is likely to happen\nExample-many birds are regarded as being portents of death',
     'potenate : a monarch or ruler, especially an autocratic one\nExample-Valdemar was now, after the king of England, the most powerful potentate in the north of Europe',
@@ -80,8 +87,8 @@ wordd=[
 ]
 
 microbes=[
-    "Rhinovirus\nType:virus\nDisease:Common cold",
-    "AIDS(Acquired Immunodeficiency Disease)\nType:virus\nDisease:HIV(Human Immunodeficiency Disease)",
+    "Rhinovirus\nType:virus\nDisease:Common cold",                                                                              
+    "HIV(Human Immunodeficiency Virus)\nType:virus\nDisease:AIDS(Acquired Immunodeficiency Disease)",
     "Salmonella Typhi\nType:bacteria\nDisease:Typhoid",
     "Vibrio Cholerae\nType:Bacteria\nDisease:Cholera",
     "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
@@ -89,25 +96,47 @@ microbes=[
     "Yersinia Pestis\nType:bacteria\nDisease-Black Plague",
     "Variola virus\nType:virus\nDisease:Smallpox",
     "Epstein-Barr virus\nType:virus\nDisease:Mononucleosis",
-    "Typhoid\nType:bacteria\nDisease:Salmonella Typhi",
-    "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis"
+    "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis",
+    "Rickettsia Rickettsii\nType:bacteria\nDisease:Rocky Mountain Spotted Fever",
+    "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
+    "Influenza virus\nType:virus\nDisease:Flu"
+]
+
+microbe_images=[
+ 'images/microbe_images/rhinovirus.png',
+ 'images/microbe_images/hiv.png',
+ 'images/microbe_images/salmonellatyphi.png',
+ 'images/microbe_images/vibrio_cholerae.png',
+ 'images/microbe_images/bacillus_anthracis.png',
+ 'images/microbe_images/varicella_zoster.png',
+ 'images/microbe_images/yersinia_pestis.png',
+ 'images/microbe_images/variola_virus.png',
+ 'images/microbe_images/epstein_virus.png',
+ 'images/microbe_images/mycoacterium_tuberculosis.png',
+ 'images/microbe_images/rickettsia_rickettsii.png',
+ 'images/microbe_images/bordetella_pertusis.png',
+ 'images/microbe_images/influenza.png'
+
 ]
 
 
 lost_game=[
     'noooooooooooo i lost',
     'damm it u won',
-    'i lost :('
+    'i lost :(',
+    'u won :('
 ]
 won_game=[
     'i won!!!! :)',
     'yay i wonnnnnnnn',
-    'i guess i am better than u in this game'
+    'i guess i am better than u in this game',
+    'i win hehe'
 ]
 tie_game=[
     'its a tie bruh :/',
     'tie,atleast i didnt lose.',
-    'ufffff close,its a tie'
+    'ufffff close,its a tie',
+    'no one won'
 ]
 
 sourcee=[
@@ -174,7 +203,10 @@ async def word(ctx):
 
 @client.command()
 async def microbe(ctx):
-    await ctx.send(random.choice(microbes))
+    x=len(microbes)
+    y = random.randint(0,x-1)
+    await ctx.send(microbes[y])
+    await ctx.send(file=discord.File(microbe_images[y]))
 
 
 @client.command()
@@ -286,11 +318,11 @@ async def extras(ctx):
     
 @client.command()
 async def source(ctx):
-    await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package")
+    await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia")
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nfixed math help command\nfinally added mathprob command :partying_face:\n-developer of e-bot")    
+    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nadded images for microbe command\n-developer of e-bot")    
     
     
 @client.command()
