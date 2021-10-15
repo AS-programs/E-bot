@@ -1,6 +1,6 @@
 import discord
 import math as meth
-import os 
+import os
 import dotenv
 import requests
 import json
@@ -13,6 +13,7 @@ dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
 
+
 def get_quote():
     response = requests.get("https://zenquotes.io/api/random")
     json_data = json.loads(response.text)
@@ -20,7 +21,12 @@ def get_quote():
     return (quote)
 
 
-hello_words=[
+images = []
+res = requests.get("https://api.nasa.gov/planetary/earth/imagery?api key=hrFSpCJBxfctlUTtfF9wZuJCREfFe6b4hkZv2H8m")
+data = res.json()
+images.append(data)
+
+hello_words = [
     'hola',
     'hello random discord user',
     'hello there e-bot here',
@@ -31,8 +37,7 @@ hello_words=[
     'hey there'
 ]
 
-
-wordd=[
+wordd = [
     'abberation : a departure from what is normal, usual, or expected, typically an unwelcome one\nExample-they described the outbreak of violence in the area as an aberration',
     'abnegation : the action of renouncing or rejecting something \nExample-abnegation of political power',
     'apathetic : showing or feeling no interest, enthusiasm, or concern.\nExample-an apathetic electorate',
@@ -86,60 +91,61 @@ wordd=[
 
 ]
 
-microbes=[
-    "Rhinovirus\nType:virus\nDisease:Common cold",                                                                              
+microbes = [
+    "Rhinovirus\nType:virus\nDisease:Common cold",
     "HIV(Human Immunodeficiency Virus)\nType:virus\nDisease:AIDS(Acquired Immunodeficiency Disease)",
     "Salmonella Typhi\nType:bacteria\nDisease:Typhoid",
     "Vibrio Cholerae\nType:Bacteria\nDisease:Cholera",
     "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
     "Varicella Zoster virus\nType:virus\nDisease:Chickenpox",
-    "Yersinia Pestis\nType:bacteria\nDisease-Black Plague",
+    "Yersinia Pestis\nType:bacteria\nDisease:Black Plague",
     "Variola virus\nType:virus\nDisease:Smallpox",
     "Epstein-Barr virus\nType:virus\nDisease:Mononucleosis",
     "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis",
     "Rickettsia Rickettsii\nType:bacteria\nDisease:Rocky Mountain Spotted Fever",
     "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
-    "Influenza virus\nType:virus\nDisease:Flu"
+    "Influenza virus\nType:virus\nDisease:Flu",
+    "Diplocarpon rosae\nTypw:fugus\nDisease:Black spot(in plants)"
 ]
 
-microbe_images=[
- 'images/microbe_images/rhinovirus.png',
- 'images/microbe_images/hiv.png',
- 'images/microbe_images/salmonellatyphi.png',
- 'images/microbe_images/vibrio_cholerae.png',
- 'images/microbe_images/bacillus_anthracis.png',
- 'images/microbe_images/varicella_zoster.png',
- 'images/microbe_images/yersinia_pestis.png',
- 'images/microbe_images/variola_virus.png',
- 'images/microbe_images/epstein_virus.png',
- 'images/microbe_images/mycoacterium_tuberculosis.png',
- 'images/microbe_images/rickettsia_rickettsii.png',
- 'images/microbe_images/bordetella_pertusis.png',
- 'images/microbe_images/influenza.png'
+microbe_images = [
+    'images/microbe_images/rhinovirus.png',
+    'images/microbe_images/hiv.png',
+    'images/microbe_images/salmonellatyphi.png',
+    'images/microbe_images/vibrio_cholerae.png',
+    'images/microbe_images/bacillus_anthracis.png',
+    'images/microbe_images/varicella_zoster.png',
+    'images/microbe_images/yersinia_pestis.png',
+    'images/microbe_images/variola_virus.png',
+    'images/microbe_images/epstein_virus.png',
+    'images/microbe_images/mycoacterium_tuberculosis.png',
+    'images/microbe_images/rickettsia_rickettsii.png',
+    'images/microbe_images/bordetella_pertusis.png',
+    'images/microbe_images/influenza.png',
+    'images/microbe_images/blackspot.png'
 
 ]
 
-
-lost_game=[
+lost_game = [
     'noooooooooooo i lost',
     'damm it u won',
     'i lost :(',
     'u won :('
 ]
-won_game=[
+won_game = [
     'i won!!!! :)',
     'yay i wonnnnnnnn',
     'i guess i am better than u in this game',
     'i win hehe'
 ]
-tie_game=[
+tie_game = [
     'its a tie bruh :/',
     'tie,atleast i didnt lose.',
     'ufffff close,its a tie',
     'no one won'
 ]
 
-sourcee=[
+sourcee = [
     'source - mind your decisions (youtube)',
     'source - michael penn (youtube)',
     'source - michael penn (youtube)',
@@ -148,7 +154,7 @@ sourcee=[
     'source - michael penn (youtube)',
     'source - some math textboo'
 ]
-math_probs=[
+math_probs = [
     'math_probs/koink.png',
     'math_probs/koinktwo.png',
     'math_probs/koinkthree.png',
@@ -159,7 +165,7 @@ math_probs=[
 
 ]
 
-math_answers=[
+math_answers = [
     'answer- ||90 ||',
     'answer - ||n=2,3||',
     'answer - ||12-4e||',
@@ -168,7 +174,6 @@ math_answers=[
     'answer - ||ln(e^x/(e^x+1))||',
     'answer - ||x= 1 or -1||'
 ]
-
 
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
@@ -182,7 +187,8 @@ async def on_ready():
 
 @client.command()
 async def help(ctx):
-    await ctx.send("$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be i integer form for example-\n``$event 14 6`` gives the events on 23rd may. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
+    await ctx.send(
+        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be i integer form for example-\n``$event 14 6`` gives the events on 23rd may. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
 
 
 @client.command()
@@ -203,8 +209,8 @@ async def word(ctx):
 
 @client.command()
 async def microbe(ctx):
-    x=len(microbes)
-    y = random.randint(0,x-1)
+    x = len(microbes)
+    y = random.randint(0, x - 1)
     await ctx.send(microbes[y])
     await ctx.send(file=discord.File(microbe_images[y]))
 
@@ -216,117 +222,142 @@ async def fact(ctx):
 
 
 @client.command()
+async def earth(ctx):
+    xx = len(images)
+    yy = random.randint(0, xx - 1)
+    await ctx.send(file=discord.File(images[yy]))
+
+
+@client.command()
 async def game(ctx):
     await ctx.send('$rps <rock or paper or scissor> (plays a game of rockpaperscissor)')
 
+
 @client.command()
-async def rps(ctx,inputt):
-        computer = random.choice(['rock', 'scissor', 'paper'])
-        if inputt == computer:
-            await ctx.send(f"my choice was- {computer}")
-            await ctx.send(random.choice(tie_game))
-        elif (inputt == 'rock' and computer == 'scissor') or (inputt == 'scissor' and computer == 'paper') or (
-                inputt == 'paper' and computer == 'rock'):
-            await ctx.send(f"my choice was- {computer}")
-            await ctx.send(random.choice(lost_game))
-        elif inputt != 'rock' and inputt != 'scissor' and inputt != 'paper':
-            await ctx.send(f"my choice was- {computer}")
-            await ctx.send('give valid inputs duhh')
-        elif (inputt == 'scissor' and computer == 'rock') or (inputt == 'rock' and computer == 'paper') or (
-                inputt == 'paper' and computer == 'scissor'):
-            await ctx.send(f"my choice was- {computer}")
-            await ctx.send(random.choice(won_game))
-        else:
-            await ctx.send("an error occured")
+async def rps(ctx, inputt):
+    computer = random.choice(['rock', 'scissor', 'paper'])
+    if inputt == computer:
+        await ctx.send(f"my choice was- {computer}")
+        await ctx.send(random.choice(tie_game))
+    elif (inputt == 'rock' and computer == 'scissor') or (inputt == 'scissor' and computer == 'paper') or (
+            inputt == 'paper' and computer == 'rock'):
+        await ctx.send(f"my choice was- {computer}")
+        await ctx.send(random.choice(lost_game))
+    elif inputt != 'rock' and inputt != 'scissor' and inputt != 'paper':
+        await ctx.send(f"my choice was- {computer}")
+        await ctx.send('give valid inputs duhh')
+    elif (inputt == 'scissor' and computer == 'rock') or (inputt == 'rock' and computer == 'paper') or (
+            inputt == 'paper' and computer == 'scissor'):
+        await ctx.send(f"my choice was- {computer}")
+        await ctx.send(random.choice(won_game))
+    else:
+        await ctx.send("an error occured")
 
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)")       
+    await ctx.send(
+        "$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)")
+
 
 @client.command()
 async def mathprob(ctx):
-    x=len(math_probs)
-    y = random.randint(0,x-1)
+    x = len(math_probs)
+    y = random.randint(0, x - 1)
     await ctx.send(sourcee[y])
     await ctx.send(file=discord.File(math_probs[y]))
     await ctx.send(math_answers[y])
 
+
 @client.command()
 async def add(ctx, x: float, y: float):
-    await ctx.send(x+y)
+    await ctx.send(x + y)
+
 
 @client.command()
 async def subtract(ctx, x: float, y: float):
-    await ctx.send(x-y)
+    await ctx.send(x - y)
+
 
 @client.command()
 async def multiply(ctx, x: float, y: float):
-    await ctx.send(x*y)
+    await ctx.send(x * y)
+
 
 @client.command()
 async def divide(ctx, x: float, y: float):
     while True:
         try:
-            await ctx.send(x/y)
+            await ctx.send(x / y)
             break
         except ZeroDivisionError:
             await ctx.send("not defined")
         break
 
+
 @client.command()
 async def exponent(ctx, x: float, y: float):
     while True:
         try:
-            await ctx.send(x**y)
+            await ctx.send(x ** y)
             break
         except OverflowError:
             await ctx.send("exponent too high")
             break
 
+
 @client.command()
-async def cos(ctx,x:float):
+async def cos(ctx, x: float):
     await ctx.send(meth.cos(x))
 
+
 @client.command()
-async def sin(ctx,x:float):
+async def sin(ctx, x: float):
     await ctx.send(meth.sin(x))
 
+
 @client.command()
-async def tan(ctx,x:float):
+async def tan(ctx, x: float):
     await ctx.send(meth.tan(x))
 
-@client.command()
-async def sec(ctx,x:float):
-    await ctx.send(1/meth.cos(x))
 
 @client.command()
-async def cosec(ctx,x:float):
-    await ctx.send(1/meth.sin(x))
+async def sec(ctx, x: float):
+    await ctx.send(1 / meth.cos(x))
+
 
 @client.command()
-async def cot(ctx,x:float):
-    await ctx.send(1/meth.tan(x))
+async def cosec(ctx, x: float):
+    await ctx.send(1 / meth.sin(x))
+
+
+@client.command()
+async def cot(ctx, x: float):
+    await ctx.send(1 / meth.tan(x))
+
 
 @client.command()
 async def randnum(ctx, x: float, y: float):
-    await ctx.send(random.randint(x,y))
+    await ctx.send(random.randint(x, y))
+
 
 @client.command()
 async def extras(ctx):
     await ctx.send("$source - shows some of the sources for the commands\n$update-shows the recent updates for the bot")
-    
+
+
 @client.command()
 async def source(ctx):
     await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia")
 
+
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added one more english word to the $word list(current number of english words {len(wordd)})\nadded more microbes for microbe command\nadded images for microbe command\n-developer of e-bot")    
-    
-    
+    await ctx.send(f"nothing much my developer is very lazy")
+
+
 @client.command()
-async def event(ctx,date:int,month:int):
+async def event(ctx, date: int, month: int):
     # january
     if month == 1:
         if date == 4:
@@ -362,7 +393,8 @@ async def event(ctx,date:int,month:int):
         elif date == 10:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Pulses Day")
         elif date == 11:
-            await ctx.send(f"the international days on {date}/{month} are:-\n International Day of Women and Girls in Science")
+            await ctx.send(
+                f"the international days on {date}/{month} are:-\n International Day of Women and Girls in Science")
         elif date == 13:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Radio Day")
         elif date == 20:
@@ -383,7 +415,8 @@ async def event(ctx,date:int,month:int):
         elif date == 3:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Wildlife Day")
         elif date == 4:
-            await ctx.send(f"the international days on {date}/{month} are:-\n World Engineering Day for Sustainable Development")
+            await ctx.send(
+                f"the international days on {date}/{month} are:-\n World Engineering Day for Sustainable Development")
         elif date == 8:
             await ctx.send(f"the international days on {date}/{month} are:-\n International Women’s Day")
         elif date == 10:
@@ -404,7 +437,8 @@ async def event(ctx,date:int,month:int):
         elif date == 23:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Meteorological Day")
         elif date == 24:
-            await ctx.send(f"the international days on {date}/{month} are:-\n Right to Truth Day \n World Tuberculosis Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:-\n Right to Truth Day \n World Tuberculosis Day")
         elif date == 25:
             await ctx.send(
                 f"the international days on {date}/{month} are:-\n International Day of Remembrance of the Victims of Slavery and   the Transatlantic Slave Trade \n International Day of Solidarity with Detained and Missing Staff Members")
@@ -423,7 +457,8 @@ async def event(ctx,date:int,month:int):
         elif date == 5:
             await ctx.send(f"the international days on {date}/{month} are:-\n International Day of Conscience")
         elif date == 6:
-            await ctx.send(f"the international days on {date}/{month} are:-\n International Day of Sport for Development and Peace")
+            await ctx.send(
+                f"the international days on {date}/{month} are:-\n International Day of Sport for Development and Peace")
         elif date == 7:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Health Day ")
         elif date == 12:
@@ -449,7 +484,8 @@ async def event(ctx,date:int,month:int):
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Day of Multilateralism and Diplomacy for Peace")
         elif date == 25:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Delegate’s Day \n World Malaria Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Delegate’s Day \n World Malaria Day")
         elif date == 26:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n World Intellectual Property Day \n International Chernobyl Disaster Remembrance Day")
@@ -469,7 +505,8 @@ async def event(ctx,date:int,month:int):
         elif date == 2:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Tuna Day")
         elif date == 3:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Press Freedom Day \n World Asthma Day ")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Press Freedom Day \n World Asthma Day ")
         elif date == 5:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n African World Heritage Day \n World Portuguese Language Day")
@@ -477,7 +514,7 @@ async def event(ctx,date:int,month:int):
             await ctx.send(f"the international days on {date}/{month} are:- \n “Vesak”, the Day of the Full Moon")
         elif date == 8:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n Time of Remembrance and Reconciliation for Those Who Lost Their Lives During the Second World War \n World Migratory Bird Day \n World Red Cross Day")
+                f"the international days on {date}/{month} are:- \n Time of Remembrance and Reconciliation for Those Who Lost Their Lives During the Second World War \n World Migratory Bird Day \n World Red Cross Day")
         elif date == 10:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Argania")
         elif date == 15:
@@ -485,7 +522,7 @@ async def event(ctx,date:int,month:int):
                 f"the international days on {date}/{month} are:- \n International Astronomy Day \n International Day of Families")
         elif date == 16:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day of Light \n International Day of Living Together in Peace ")
+                f"the international days on {date}/{month} are:- \n International Day of Light \n International Day of Living Together in Peace ")
         elif date == 18:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Museum Day")
         elif date == 20:
@@ -494,13 +531,16 @@ async def event(ctx,date:int,month:int):
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Tea Day \n World Day for Cultural Diversity for Dialogue and Development")
         elif date == 22:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day for Biological Diversity")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day for Biological Diversity")
         elif date == 23:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day to End Obstetric Fistula")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day to End Obstetric Fistula")
         elif date == 24:
             await ctx.send(f"the international days on {date}/{month} are:- \n Commonwealth Day")
         elif date == 28:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Action for Women’s Health")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Action for Women’s Health")
         elif date == 29:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Day of UN Peacekeepers \n International Mount Everest Day")
@@ -519,7 +559,7 @@ async def event(ctx,date:int,month:int):
             await ctx.send(f"the international days on {date}/{month} are:- \n World Bicycle Day")
         elif date == 4:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day of Innocent Children Victims of Aggression")
+                f"the international days on {date}/{month} are:- \n International Day of Innocent Children Victims of Aggression")
         elif date == 5:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n World Environment Day \n International Day for the Fight against Illegal, Unreported and Unregulated Fishing")
@@ -540,7 +580,8 @@ async def event(ctx,date:int,month:int):
         elif date == 16:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Family Remittances")
         elif date == 17:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Day to Combat Desertification and Drought")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Day to Combat Desertification and Drought")
         elif date == 18:
             await ctx.send(f"the international days on {date}/{month} are:- \n Sustainable Gastronomy Day")
         elif date == 19:
@@ -549,17 +590,18 @@ async def event(ctx,date:int,month:int):
             await ctx.send(f"the international days on {date}/{month} are:- \n World Refugee Day")
         elif date == 21:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day of Yoga \n International Day of the Celebration of the Solstice \n World Music Day")
+                f"the international days on {date}/{month} are:- \n International Day of Yoga \n International Day of the Celebration of the Solstice \n World Music Day")
         elif date == 23:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n United Nations Public Service Day \n International Widows’ Day \n International Olympic Day")
+                f"the international days on {date}/{month} are:- \n United Nations Public Service Day \n International Widows’ Day \n International Olympic Day")
         elif date == 25:
             await ctx.send(f"the international days on {date}/{month} are:- \n Day of the Seafarer")
         elif date == 26:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Day against Drug Abuse and Illicit Trafficking \n United Nations International Day in Support of Victims of  Torture ")
         elif date == 27:
-            await ctx.send(f"the international days on {date}/{month} are:- \n Micro-, Small and Medium-sized Enterprises Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n Micro-, Small and Medium-sized Enterprises Day")
         elif date == 29:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of the Tropics")
         elif date == 30:
@@ -573,16 +615,19 @@ async def event(ctx,date:int,month:int):
     # july
     elif month == 7:
         if date == 2:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Sports Journalists Day \n World UFO Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Sports Journalists Day \n World UFO Day")
         elif date == 3:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day of Cooperatives \n International Plastic Bag Free Day \n International Co-operative Day")
+                f"the international days on {date}/{month} are:- \n International Day of Cooperatives \n International Plastic Bag Free Day \n International Co-operative Day")
         elif date == 5:
             await ctx.send(f"the international days on {date}/{month} are:- \n Bikini Day")
         elif date == 6:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Zoonoses Day \n International Kissing Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Zoonoses Day \n International Kissing Day")
         elif date == 7:
-            await ctx.send(f"the international days on {date}/{month} are:- \n Global Forgiveness Day \n World Chocolate Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n Global Forgiveness Day \n World Chocolate Day")
         elif date == 11:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Population Day")
         elif date == 12:
@@ -590,20 +635,23 @@ async def event(ctx,date:int,month:int):
         elif date == 15:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Youth Skills Day")
         elif date == 17:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Emoji Day \n World Day for International Justice")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Emoji Day \n World Day for International Justice")
         elif date == 18:
             await ctx.send(f"the international days on {date}/{month} are:- \n Nelson Mandela International Day")
         elif date == 20:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Chess Day \n apollo 11 moon lading anniversary ")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Chess Day \n apollo 11 moon lading anniversary ")
         elif date == 22:
             await ctx.send(f"the international days on {date}/{month} are:- \n Pi Approximation Day")
         elif date == 25:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Drowning Prevention Day")
         elif date == 26:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day for the Conservation of the Mangrove Ecosystem")
+                f"the international days on {date}/{month} are:- \n International Day for the Conservation of the Mangrove Ecosystem")
         elif date == 28:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Nature Conservation Day \n World Hepatitis Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Nature Conservation Day \n World Hepatitis Day")
         elif date == 29:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Tiger Day")
         elif date == 30:
@@ -619,7 +667,8 @@ async def event(ctx,date:int,month:int):
     # august
     elif month == 8:
         if date == 1:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Breastfeeding Week \n International Mahjong Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Breastfeeding Week \n International Mahjong Day")
         elif date == 2:
             await ctx.send(f"the international days on {date}/{month} are:-  \n World Breastfeeding Week")
         elif date == 3:
@@ -629,7 +678,8 @@ async def event(ctx,date:int,month:int):
         elif date == 5:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Breastfeeding Week")
         elif date == 6:
-            await ctx.send(f"the international days on {date}/{month} are:- \n Hiroshima Day \n World Breastfeeding Week")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n Hiroshima Day \n World Breastfeeding Week")
         elif date == 7:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Breastfeeding Week")
         elif date == 8:
@@ -640,7 +690,8 @@ async def event(ctx,date:int,month:int):
         elif date == 10:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Lion Day")
         elif date == 12:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Youth Day \n World Elephant Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Youth Day \n World Elephant Day")
         elif date == 13:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Lefthanders Day")
         elif date == 14:
@@ -660,9 +711,10 @@ async def event(ctx,date:int,month:int):
                 f"the international days on {date}/{month} are:- \n International Day Commemorating the Victims of Acts of Violence Based on Religion or Belief")
         elif date == 23:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day for the Remembrance of the Slave Trade and Its Abolition \n Black Ribbon Day ")
+                f"the international days on {date}/{month} are:- \n International Day for the Remembrance of the Slave Trade and Its Abolition \n Black Ribbon Day ")
         elif date == 26:
-            await ctx.send(f"the international days on {date}/{month} are:- \n Women’s Equality Day \n International Dog Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n Women’s Equality Day \n International Dog Day")
         elif date == 29:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day against Nuclear Tests")
         elif date == 30:
@@ -683,13 +735,16 @@ async def event(ctx,date:int,month:int):
         elif date == 5:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Charity")
         elif date == 7:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Clean Air for Blue Skies")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Clean Air for Blue Skies")
         elif date == 8:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Literacy Day")
         elif date == 9:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day to Protect Education from Attack")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day to Protect Education from Attack")
         elif date == 12:
-            await ctx.send(f"the international days on {date}/{month} are:- \n United Nations Day for South-South Cooperation")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n United Nations Day for South-South Cooperation")
         elif date == 15:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Democracy")
         elif date == 16:
@@ -705,7 +760,7 @@ async def event(ctx,date:int,month:int):
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of University Spor")
         elif date == 21:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n International Day of Peace \n World Alzheimer’s Day \n Biosphere Day")
+                f"the international days on {date}/{month} are:- \n International Day of Peace \n World Alzheimer’s Day \n Biosphere Day")
         elif date == 22:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Rhino Day")
         elif date == 23:
@@ -718,9 +773,11 @@ async def event(ctx,date:int,month:int):
         elif date == 27:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Tourism Day")
         elif date == 28:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Awareness of Food Loss and Waste")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Awareness of Food Loss and Waste")
         elif date == 29:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Awareness of Food Loss and Waste")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Awareness of Food Loss and Waste")
         elif date == 30:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Translation Day \n International Blasphemy Rights Day")
@@ -748,24 +805,26 @@ async def event(ctx,date:int,month:int):
             await ctx.send(f"the international days on {date}/{month} are:- \n  World Space Week")
         elif date == 9:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n World Post Day \n World Migratory Bird Day \n World Space Week")
+                f"the international days on {date}/{month} are:- \n World Post Day \n World Migratory Bird Day \n World Space Week")
         elif date == '10':
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n World Mental Health Day \n World Migratory Bird Day \n World Space Week")
         elif date == 11:
             await ctx.send(
-            f"the international days on {date}/{month} are:- \n International Day of the Girl Child")
+                f"the international days on {date}/{month} are:- \n International Day of the Girl Child")
         elif date == 13:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day for Disaster Risk Reduction")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day for Disaster Risk Reduction")
         elif date == 15:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Rural Women")
         elif date == 16:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Food Day")
         elif date == 17:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day for the Eradication of Poverty")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day for the Eradication of Poverty")
         elif date == 20:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n World Statistics Day \n International Day of the Air Traffic Controller")
+                f"the international days on {date}/{month} are:- \n World Statistics Day \n International Day of the Air Traffic Controller")
         elif date == 24:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n United Nations Day \n World Development Information Day \n World Polio Day")
@@ -802,7 +861,8 @@ async def event(ctx,date:int,month:int):
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n World Diabetes Day \n International Day against Illicit Trafficking in Cultural Property")
         elif date == 15:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Day of Remembrance for Road Traffic Victims")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Day of Remembrance for Road Traffic Victims")
         elif date == 16:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day for Tolerance ")
         elif date == 17:
@@ -814,9 +874,10 @@ async def event(ctx,date:int,month:int):
                 f"the international days on {date}/{month} are:- \n World Toilet Day \n World Philosophy Day \n International Men’s Day")
         elif date == 20:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n Africa Industrialization Day \n World Children’s Day \n Transgender Day of Remembrance")
+                f"the international days on {date}/{month} are:- \n Africa Industrialization Day \n World Children’s Day \n Transgender Day of Remembrance")
         elif date == 21:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Fisheries Day \n World Television Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n World Fisheries Day \n World Television Day")
         elif date == 25:
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Day for the Elimination of Violence against Women \n National Day of Mourning")
@@ -827,7 +888,7 @@ async def event(ctx,date:int,month:int):
                 f"the international days on {date}/{month} are:- \n International Day of Solidarity with the Palestinian People")
         elif date == 30:
             await ctx.send(
-               f"the international days on {date}/{month} are:- \n Day of Remembrance for all Victims of Chemical Warfare")
+                f"the international days on {date}/{month} are:- \n Day of Remembrance for all Victims of Chemical Warfare")
         elif date > 30 or date < 0:
             await ctx.send("no such dates exist in the given month")
         else:
@@ -838,9 +899,11 @@ async def event(ctx,date:int,month:int):
         if date == 1:
             await ctx.send(f"the international days on {date}/{month} are:- \n World AIDS Day ")
         elif date == 2:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day for the Abolition of Slavery")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day for the Abolition of Slavery")
         elif date == 3:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Persons with Disabilities")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Persons with Disabilities")
         elif date == 4:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Banks")
         elif date == 5:
@@ -852,7 +915,8 @@ async def event(ctx,date:int,month:int):
             await ctx.send(
                 f"the international days on {date}/{month} are:- \n International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of this  \n International Anti-Corruption Day")
         elif date == 10:
-            await ctx.send(f"the international days on {date}/{month} are:- \n Human Rights Day \n International Animal Rights Day")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n Human Rights Day \n International Animal Rights Day")
         elif date == 11:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Mountain Day")
         elif date == 12:
@@ -864,7 +928,8 @@ async def event(ctx,date:int,month:int):
         elif date == 20:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Human Solidarity Day ")
         elif date == 27:
-            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Epidemic Preparedness")
+            await ctx.send(
+                f"the international days on {date}/{month} are:- \n International Day of Epidemic Preparedness")
         elif date > 31 or date < 0:
             await ctx.send("no such dates exist in the given month")
         else:
@@ -872,5 +937,6 @@ async def event(ctx,date:int,month:int):
     else:
         await ctx.send("non existent or non integer month given")
 
-TOKEN=os.getenv('TOKEN')
+
+TOKEN = os.getenv('TOKEN')
 client.run(TOKEN)
