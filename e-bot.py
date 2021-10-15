@@ -155,13 +155,13 @@ sourcee = [
     'source - some math textboo'
 ]
 math_probs = [
-    'math_probs/koink.png',
-    'math_probs/koinktwo.png',
-    'math_probs/koinkthree.png',
-    'math_probs/koinkfour.png',
-    'math_probs/koinkfive.png',
-    'math_probs/koinksix.png',
-    'math_probs/koinkseven.png'
+    'images/math_probs/koink.png',
+    'images/math_probs/koinktwo.png',
+    'images/math_probs/koinkthree.png',
+    'images/math_probs/koinkfour.png',
+    'images/math_probs/koinkfive.png',
+    'images/math_probs/koinksix.png',
+    'images/math_probs/koinkseven.png'
 
 ]
 
