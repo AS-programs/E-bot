@@ -154,6 +154,7 @@ sourcee = [
     'source - michael penn (youtube)',
     'source - some math textboo'
 ]
+
 math_probs = [
     'images/math_probs/koink.png',
     'images/math_probs/koinktwo.png',
@@ -165,7 +166,8 @@ math_probs = [
 
 ]
 
-math_answers = [
+
+math_answers=[
     'answer- ||90 ||',
     'answer - ||n=2,3||',
     'answer - ||12-4e||',
@@ -188,7 +190,7 @@ async def on_ready():
 @client.command()
 async def help(ctx):
     await ctx.send(
-        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be i integer form for example-\n``$event 14 6`` gives the events on 23rd may. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
+        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be in integer form for example-\n``$event 14 6`` gives the events on 14th june. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
 
 
 @client.command()
