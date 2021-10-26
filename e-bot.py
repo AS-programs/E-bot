@@ -272,6 +272,11 @@ async def mathprob(ctx):
 
 
 @client.command()
+async def mathsymbols(ctx):
+    await ctx.send("ε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx, - derivative\n ∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta")
+
+
+@client.command()
 async def add(ctx, x: float, y: float):
     await ctx.send(x + y)
 
@@ -345,17 +350,23 @@ async def randnum(ctx, x: float, y: float):
 
 @client.command()
 async def extras(ctx):
-    await ctx.send("$source - shows some of the sources for the commands\n$update-shows the recent updates for the bot")
+    await ctx.send("$source - shows some of the sources for the commands\n$bot - gives basic info about the bot\n$update-shows the recent updates for the bot")
 
 
 @client.command()
 async def source(ctx):
     await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia")
 
+@client.command()
+async def bot(ctx):
+    hm=len(math_probs);
+    hmm=len(wordd)
+    hmmm=len(microbes)
+    await ctx.send(f"Hello i am e-bot\ni was made in python (disord.py)\nnumber of mathproblems for mathprob command - {hm}\nnumber of words in word command - {hmm}\nnumber of microbes in microbe command - {hmmm}")
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"nothing much my developer is very lazy")
+    await ctx.send(f"added math symbols command\nadded $bot command\n-developer of e-bot (on 26/10/2021)")
 
 
 @client.command()
