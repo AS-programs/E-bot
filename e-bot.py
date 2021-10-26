@@ -362,7 +362,7 @@ async def bot(ctx):
     hm=len(math_probs);
     hmm=len(wordd)
     hmmm=len(microbes)
-    await ctx.send(f"Hello i am e-bot\ni was made in python (disord.py)\nnumber of mathproblems for mathprob command - {hm}\nnumber of words in word command - {hmm}\nnumber of microbes in microbe command - {hmmm}")
+    await ctx.send(f"Hello i am e-bot\ni was made in python (discord.py)\nnumber of mathproblems for mathprob command - {hm}\nnumber of words in word command - {hmm}\nnumber of microbes in microbe command - {hmmm}")
 
 @client.command()
 async def update(ctx):
