@@ -259,7 +259,7 @@ async def rps(ctx, inputt):
 @client.command()
 async def math(ctx):
     await ctx.send(
-        "$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)")
+        "$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -273,7 +273,7 @@ async def mathprob(ctx):
 
 @client.command()
 async def mathsymbols(ctx):
-    await ctx.send("ε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx, - derivative\n ∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta")
+    await ctx.send("ε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx, - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta")
 
 
 @client.command()
