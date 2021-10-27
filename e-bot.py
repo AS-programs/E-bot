@@ -105,7 +105,8 @@ microbes = [
     "Rickettsia Rickettsii\nType:bacteria\nDisease:Rocky Mountain Spotted Fever",
     "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
     "Influenza virus\nType:virus\nDisease:Flu",
-    "Diplocarpon rosae\nTypw:fugus\nDisease:Black spot(in plants)"
+    "Diplocarpon rosae\nType:fugus\nDisease:Black spot(in plants)",
+    "Mosaic virus\nType:Virus"
 ]
 
 microbe_images = [
@@ -122,7 +123,8 @@ microbe_images = [
     'images/microbe_images/rickettsia_rickettsii.png',
     'images/microbe_images/bordetella_pertusis.png',
     'images/microbe_images/influenza.png',
-    'images/microbe_images/blackspot.png'
+    'images/microbe_images/blackspot.png',
+    'images/microbe_images/mosaicvirus.png'
 
 ]
 
@@ -152,7 +154,8 @@ sourcee = [
     'source - general question',
     'source - some math textbook',
     'source - michael penn (youtube)',
-    'source - some math textboo'
+    'source - some math textboo',
+    'source - professor dave explains (youtube)'
 ]
 
 math_probs = [
@@ -162,8 +165,8 @@ math_probs = [
     'images/math_probs/koinkfour.png',
     'images/math_probs/koinkfive.png',
     'images/math_probs/koinksix.png',
-    'images/math_probs/koinkseven.png'
-
+    'images/math_probs/koinkseven.png',
+    'images/math_probs/koinkeight.png'
 ]
 
 
@@ -174,7 +177,8 @@ math_answers=[
     'answer - ||pi     ||',
     'answer - ||root pi||',
     'answer - ||ln(e^x/(e^x+1))||',
-    'answer - ||x= 1 or -1||'
+    'answer - ||x= 1 or -1||',
+    'answer - ||-18      ||'
 ]
 
 client = commands.Bot(command_prefix='$')
