@@ -48,6 +48,7 @@ wordd = [
     'callous : showing or having an insensitive and cruel disregard for others.\nExample-his callous comments about the murder made me angry',
     'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
     'comply : act in accordance with a wish or command\nExample-we are unable to comply with your request',
+    'consensus : a general agreement\nExample-there is a growing consensus that the current regime has failed'
     'consign : deliver (something) to a persons keeping.\nExample-he consigned three paintings to Sotheby',
     'construed : interpret (a word or action) in a particular way\nExample-his words could hardly be construed as an apology',
     'contusion : a region of injured tissue or skin in which blood capillaries have been ruptured; a bruise\nExample-a dark contusion on his cheek was beginning to swell',
@@ -58,6 +59,7 @@ wordd = [
     'dispel : make (a doubt, feeling, or belief) disappear\nExample-The breeze dispelled the bad odor',
     'embezzlement : theft or misappropriation of funds placed in ones trust or belonging to ones employer\nExample-charges of fraud and embezzlement',
     'emulate : match or surpass (a person or achievement)\nExample-most rulers wished to emulate Alexander the Great',
+    'enervate : make (someone) feel drained of energy or vitality\nExample-the heat enervated us all',
     'enormity : the scale or extent of something percieved as bad or morally wrong\nExample-a thorough search disclosed the full enormity of the crime',
     'equanimity : calmness and composure, especially in a difficult situation\nExample-she accepted both the good and the bad with equanimity',
     'exhort : strongly encourage or urge (someone) to do something\nExample-I exhorted her to be a good child',
@@ -76,6 +78,7 @@ wordd = [
     'munificent : characterized by or displaying great generosity\nExample-a munificent bequest',
     'nonplussed : so surprised and confused that one is unsure how to react.\nExample-Henry looked completely nonplussed',
     'noxious : harmful, poisonous, or very unpleasant\nExample-they were overcome by the noxious fumes',
+    'obdurate : stubbornly refusing to change ones opinion or course of action\nExample-I argued this point with him, but he was obdurate'
     'paradigm : a typical example or pattern of something,\nExample-The object-oriented paradigm is a new and different way of thinking about programming',
     'phlegmatic : (of a person) having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character'
     'phlogmatic : having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
@@ -106,7 +109,9 @@ microbes = [
     "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
     "Influenza virus\nType:virus\nDisease:Flu",
     "Diplocarpon rosae\nType:fugus\nDisease:Black spot(in plants)",
-    "Mosaic virus\nType:Virus"
+    "Mosaic virus\nType:Virus\nDisease:Mosaic disease(in plants)",
+    "Plasmodium Malariae\nType:Protozoa\nDisease:Malaria",
+    "Dengue virus\nType:virus\nDisease:Dengue"
 ]
 
 microbe_images = [
@@ -124,7 +129,9 @@ microbe_images = [
     'images/microbe_images/bordetella_pertusis.png',
     'images/microbe_images/influenza.png',
     'images/microbe_images/blackspot.png',
-    'images/microbe_images/mosaicvirus.png'
+    'images/microbe_images/mosaicvirus.png',
+    'images/microbe_images/Plasmodiummalariae.jpg',
+    'images/microbe_images/Denguevirus.jpg'
 
 ]
 
@@ -370,7 +377,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added math symbols command\nadded $bot command\n-developer of e-bot (on 26/10/2021)")
+    await ctx.send(f"added more english words\nadded one more microbe\n-developer of e-bot (on 31/10/2021)")
 
 
 @client.command()
@@ -850,7 +857,7 @@ async def event(ctx, date: int, month: int):
         elif date == 30:
             await ctx.send(f"the international days on {date}/{month} are:- \n World Thrift Day")
         elif date == 31:
-            await ctx.send(f"the international days on {date}/{month} are:- \n World Cities Day ")
+            await ctx.send(f"the international days on {date}/{month} are:- \n World Cities Day \n Halloween")
         elif date > 31 or date < 0:
             await ctx.send("no such dates exist in the given month")
         else:
