@@ -60,6 +60,7 @@ wordd = [
     'dirge : a mournful song, piece of music, or sound.\nExample-singers chanted dirges',
     'disparate : essentially different in kind; not able to be compared\nExample-they inhabit disparate worlds of thought',
     'dispel : make (a doubt, feeling, or belief) disappear\nExample-The breeze dispelled the bad odor',
+    'ecclesiastical : relating to the Christian Church or its clergy\nexample-the ecclesiastical hierarchy',
     'embezzlement : theft or misappropriation of funds placed in ones trust or belonging to ones employer\nExample-charges of fraud and embezzlement',
     'emulate : match or surpass (a person or achievement)\nExample-most rulers wished to emulate Alexander the Great',
     'enervate : make (someone) feel drained of energy or vitality\nExample-the heat enervated us all',
@@ -68,12 +69,14 @@ wordd = [
     'exhort : strongly encourage or urge (someone) to do something\nExample-I exhorted her to be a good child',
     'exigent : pressing; demanding\nExample-the exigent demands of her contemporaries music took a toll on her voice',
     'gullible : easily persuaded to believe something; credulous.\nExample-an attempt to persuade a gullible public to spend their money',
+    'hierarchy : a system in which members of an organization or society are ranked according to relative status or authority\nExample-the initiative was with those lower down in the hierarchy'
     'hoi polloi : the masses; the common people\nExample-the politician decreased the taxes to appease the hoi polloi',
     'ignominious : deserving or causing public disgrace or shame\nExample-no other party risked ignominious defeat',
     'impetuous : acting or done quickly and without thought or care \nExample-she might live to regret this impetuous decision',
     'inane : lacking sense or meaning; silly\nExample-dont badger people with inane questions',
     'inchoate : just begun so not yet fully developed\nExample-a still inchoate democracy',
     'indefatigable : persisting continuosly and tirelessly\nExample-an indefatigable defender of human rights',
+    'indict : formally accuse of or charge with a crime\nExample-his former manager was indicted for fraud',
     'infringe : actively break the terms of (a law, agreement, etc.) \nExample-making an unauthorized copy would infringe copyright',
     'inveterate : having a particular habit, activity, or interest that is long-established and unlikely to change\nExample-an inveterate gambler ',
     'martinate : a person who demands complete obedience; a strict disciplinarian\nExample-a martinant dictator ruled the kingdom',
@@ -89,8 +92,9 @@ wordd = [
     'potenate : a monarch or ruler, especially an autocratic one\nExample-Valdemar was now, after the king of England, the most powerful potentate in the north of Europe',
     'relegate : assign an inferior rank or position to\nExample-they aim to prevent her from being relegated to a secondary role',
     'remiss : lacking care or attention to duty; negligent\nExample-it would be very remiss of me not to pass on that information',
+    'sacrilege : violation or misuse of what is regarded as sacred\nputting ecclesiastical vestments to secular use was considered sacrilege',
     'saguine : optimistic or positive, especially in an apparently bad or difficult situation\nExample-he is sanguine about prospects for the global economy',
-    'staid : sedate, respectable, and unadventurous\nExample-staid law firms'
+    'staid : sedate, respectable, and unadventurous\nExample-staid law firms',
     'unabashed : not embarrassed, disconcerted, or ashamed\nExample-he was unabashed despite failing in his test',
     'uncanny : strange or mysterious, especially in an unsettling way\nExample-an uncanny feeling that she was being watched',
     'veracity : conformity to facts; accuracy\nExamples-officials expressed doubts concerning the veracity of the story'
@@ -114,7 +118,8 @@ microbes = [
     "Diplocarpon rosae\nType:fugus\nDisease:Black spot(in plants)",
     "Mosaic virus\nType:Virus\nDisease:Mosaic disease(in plants)",
     "Plasmodium Malariae\nType:Protozoa\nDisease:Malaria",
-    "Dengue virus\nType:virus\nDisease:Dengue"
+    "Dengue virus\nType:virus\nDisease:Dengue",
+    "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis"
 ]
 
 microbe_images = [
@@ -134,7 +139,8 @@ microbe_images = [
     'images/microbe_images/blackspot.png',
     'images/microbe_images/mosaicvirus.png',
     'images/microbe_images/Plasmodiummalariae.jpg',
-    'images/microbe_images/Denguevirus.jpg'
+    'images/microbe_images/Denguevirus.jpg',
+    'images/microbe_images/cryptosporidiummuris.jpg'
 
 ]
 
@@ -390,14 +396,14 @@ async def source(ctx):
 
 @client.command()
 async def bot(ctx):
-    hm=len(math_probs);
+    hm=len(math_probs)
     hmm=len(wordd)
     hmmm=len(microbes)
     await ctx.send(f"Hello i am e-bot\ni was made in python (discord.py)\nnumber of mathproblems for mathprob command - {hm}\nnumber of words in word command - {hmm}\nnumber of microbes in microbe command - {hmmm}")
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more english words\nadded one more microbe\n-developer of e-bot (on 31/10/2021)")
+    await ctx.send(f"added more words\nadded new math problem\nadded one more microbe\n-developer of e-bot (on 3/11/2021)")
 
 
 @client.command()
