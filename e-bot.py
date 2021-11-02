@@ -1,5 +1,9 @@
 import discord
 import math as meth
+from math import gcd as gcdd
+from math import lcm as lcmm
+from math import factorial as factoriall
+
 import os
 import dotenv
 import requests
@@ -12,7 +16,6 @@ import randfacts
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
-
 
 def get_quote():
     response = requests.get("https://zenquotes.io/api/random")
@@ -162,7 +165,8 @@ sourcee = [
     'source - some math textbook',
     'source - michael penn (youtube)',
     'source - some math textboo',
-    'source - professor dave explains (youtube)'
+    'source - professor dave explains (youtube)',
+    'source - general'
 ]
 
 math_probs = [
@@ -173,7 +177,8 @@ math_probs = [
     'images/math_probs/koinkfive.png',
     'images/math_probs/koinksix.png',
     'images/math_probs/koinkseven.png',
-    'images/math_probs/koinkeight.png'
+    'images/math_probs/koinkeight.png',
+    'images/math_probs/koinknine.png'
 ]
 
 
@@ -185,7 +190,8 @@ math_answers=[
     'answer - ||root pi||',
     'answer - ||ln(e^x/(e^x+1))||',
     'answer - ||x= 1 or -1||',
-    'answer - ||-18      ||'
+    'answer - ||18      ||',
+    'answer - ||~0.916 (catalans constant)||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -270,7 +276,7 @@ async def rps(ctx, inputt):
 @client.command()
 async def math(ctx):
     await ctx.send(
-        "$add/subtract/multiply/divide/exponent <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+        "$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -285,6 +291,20 @@ async def mathprob(ctx):
 @client.command()
 async def mathsymbols(ctx):
     await ctx.send("ε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta")
+
+@client.command()
+async def lcm(ctx, x: int, y: int):
+    await ctx.send(lcmm(x,y))
+
+
+@client.command()
+async def gcd(ctx, x: int, y: int):
+    await ctx.send(gcdd(x,y))
+
+
+@client.command()
+async def factorial(ctx, x: int):
+    await ctx.send(factoriall(x))
 
 
 @client.command()
