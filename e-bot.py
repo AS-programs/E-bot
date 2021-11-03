@@ -296,7 +296,7 @@ async def mathprob(ctx):
 
 @client.command()
 async def mathsymbols(ctx):
-    await ctx.send("ε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta")
+    await ctx.send("≅ - congruency\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega")
 
 @client.command()
 async def lcm(ctx, x: int, y: int):
