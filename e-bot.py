@@ -118,7 +118,9 @@ microbes = [
     "Mosaic virus\nType:Virus\nDisease:Mosaic disease(in plants)",
     "Plasmodium Malariae\nType:Protozoa\nDisease:Malaria",
     "Dengue virus\nType:virus\nDisease:Dengue",
-    "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis"
+    "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis",
+    "Stachybotrys chartarum\nType:Fungi\nDisease:Toxic Black Mold(in plants)",
+    "Phytophthora infestans\nType:Fungi\nDisease:Potato Blight(in plants)"
 ]
 
 microbe_images = [
@@ -139,7 +141,9 @@ microbe_images = [
     'images/microbe_images/mosaicvirus.png',
     'images/microbe_images/Plasmodiummalariae.jpg',
     'images/microbe_images/Denguevirus.jpg',
-    'images/microbe_images/cryptosporidiummuris.jpg'
+    'images/microbe_images/cryptosporidiummuris.jpg',
+    'images/microbe_images/stachybotrys.jpg',
+    'images/microbe_images/phytophthora_infestans.jpg'
 
 ]
 
@@ -152,6 +156,7 @@ lost_game = [
 won_game = [
     'i won!!!! :)',
     'yay i wonnnnnnnn',
+    "wohooooooooooooooooooooooo i win"
     'i guess i am better than u in this game',
     'i win hehe'
 ]
@@ -402,7 +407,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more words\nadded new math problem\nadded one more microbe\n-developer of e-bot (on 3/11/2021)")
+    await ctx.send(f"added more microbes\nadded new math symbol\n-developer of e-bot (on 16/11/2021)")
 
 
 @client.command()
