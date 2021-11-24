@@ -120,7 +120,10 @@ microbes = [
     "Dengue virus\nType:virus\nDisease:Dengue",
     "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis",
     "Stachybotrys chartarum\nType:Fungi\nDisease:Toxic Black Mold(in plants)",
-    "Phytophthora infestans\nType:Fungi\nDisease:Potato Blight(in plants)"
+    "Phytophthora infestans\nType:Fungi\nDisease:Potato Blight(in plants)",
+    "Apthovirus\nType:Virus\nDisease:Food and mouth disease(in cattle)",
+    "Bluetongue virus\nType:Virus\nDisease:Food and mouth disease(in ruminants)",
+    "Clostridium Tetani\nType:Virus\nDisease:Tetanus"
 ]
 
 microbe_images = [
@@ -144,7 +147,9 @@ microbe_images = [
     'images/microbe_images/cryptosporidiummuris.jpg',
     'images/microbe_images/stachybotrys.jpg',
     'images/microbe_images/phytophthora_infestans.jpg'
-
+    'images/microbe_images/apthovirus.jpg',
+    'images/microbe_images/bluetonguevirus.jpg',
+    'images/microbe_images/clostridium.jpg'
 ]
 
 lost_game = [
@@ -285,8 +290,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send(
-        "$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -300,7 +304,7 @@ async def mathprob(ctx):
 
 @client.command()
 async def mathsymbols(ctx):
-    await ctx.send("≅ - congruency\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
+    await ctx.send("± - plus or minus symbol\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
 
 @client.command()
 async def lcm(ctx, x: int, y: int):
@@ -407,7 +411,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more microbes\nadded new math symbol\n-developer of e-bot (on 16/11/2021)")
+    await ctx.send(f"added more microbes\nadded new math symbol\n-developer of e-bot (on 25/11/2021)")
 
 
 @client.command()
