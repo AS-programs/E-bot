@@ -23,11 +23,6 @@ def get_quote():
     return (quote)
 
 
-images = []
-res = requests.get("https://api.nasa.gov/planetary/earth/imagery?api key=hrFSpCJBxfctlUTtfF9wZuJCREfFe6b4hkZv2H8m")
-data = res.json()
-images.append(data)
-
 hello_words = [
     'hola',
     'hello random discord user',
@@ -48,6 +43,7 @@ wordd = [
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
     'callous : showing or having an insensitive and cruel disregard for others.\nExample-his callous comments about the murder made me angry',
+    'coagulation : the action or process of a liquid, especially blood, changing to a solid or semi-solid state\nExample-a supplement that inhibits blood coagulation',
     'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
     'comply : act in accordance with a wish or command\nExample-we are unable to comply with your request',
     'consensus : a general agreement\nExample-there is a growing consensus that the current regime has failed'
@@ -179,9 +175,10 @@ sourcee = [
     'source - general question',
     'source - some math textbook',
     'source - michael penn (youtube)',
-    'source - some math textboo',
+    'source - some math textbook',
     'source - professor dave explains (youtube)',
-    'source - general'
+    'source - general',
+    'source - professor dave explains (youtube)'
 ]
 
 math_probs = [
@@ -193,7 +190,8 @@ math_probs = [
     'images/math_probs/koinksix.png',
     'images/math_probs/koinkseven.png',
     'images/math_probs/koinkeight.png',
-    'images/math_probs/koinknine.png'
+    'images/math_probs/koinknine.png',
+    'images/math_probs/koinkten.png'
 ]
 
 
@@ -201,12 +199,13 @@ math_answers=[
     'answer- ||90 ||',
     'answer - ||n=2,3||',
     'answer - ||12-4e||',
-    'answer - ||pi     ||',
-    'answer - ||root pi||',
+    'answer - ||π     ||',
+    'answer - ||root π||',
     'answer - ||ln(e^x/(e^x+1))||',
     'answer - ||x= 1 or -1||',
     'answer - ||18      ||',
-    'answer - ||~0.916 (catalans constant)||'
+    'answer - ||~0.916 (catalans constant)||',
+    'answer - ||(56/5)π||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -253,13 +252,6 @@ async def microbe(ctx):
 async def fact(ctx):
     facts = randfacts.get_fact()
     await ctx.send(facts)
-
-
-@client.command()
-async def earth(ctx):
-    xx = len(images)
-    yy = random.randint(0, xx - 1)
-    await ctx.send(file=discord.File(images[yy]))
 
 
 @client.command()
@@ -318,7 +310,13 @@ async def gcd(ctx, x: int, y: int):
 
 @client.command()
 async def factorial(ctx, x: int):
-    await ctx.send(factoriall(x))
+    while True:
+        try:
+          await ctx.send(factoriall(x))
+          break
+        except OverflowError:
+            await ctx.send("whoops,factorial too high")
+            break
 
 
 @client.command()
@@ -343,7 +341,7 @@ async def divide(ctx, x: float, y: float):
             await ctx.send(x / y)
             break
         except ZeroDivisionError:
-            await ctx.send("not defined")
+            await ctx.send("that is not defined :|")
         break
 
 
@@ -354,7 +352,7 @@ async def exponent(ctx, x: float, y: float):
             await ctx.send(x ** y)
             break
         except OverflowError:
-            await ctx.send("exponent too high")
+            await ctx.send("exponent too high :|")
             break
 
 
@@ -411,7 +409,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more microbes\nadded new math symbol\n-developer of e-bot (on 25/11/2021)")
+    await ctx.send(f"added more microbes\nadded new math symbol\nadded a english word\nadded an error exception\n-developer of e-bot (on 25/11/2021)")
 
 
 @client.command()
