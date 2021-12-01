@@ -31,7 +31,8 @@ hello_words = [
     'hi',
     ':person_raising_hand:',
     'hello there',
-    'hey there'
+    'hey there',
+    'Bonjour'
 ]
 
 wordd = [
