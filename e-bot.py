@@ -43,6 +43,7 @@ wordd = [
     'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
+    'belligerence : aggressive or warlike behaviour.\nExample-The leaders belligerence is dangerously irresponsible',
     'callous : showing or having an insensitive and cruel disregard for others.\nExample-his callous comments about the murder made me angry',
     'coagulation : the action or process of a liquid, especially blood, changing to a solid or semi-solid state\nExample-a supplement that inhibits blood coagulation',
     'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
@@ -120,7 +121,8 @@ microbes = [
     "Phytophthora infestans\nType:Fungi\nDisease:Potato Blight(in plants)",
     "Apthovirus\nType:Virus\nDisease:Food and mouth disease(in cattle)",
     "Bluetongue virus\nType:Virus\nDisease:Food and mouth disease(in ruminants)",
-    "Clostridium Tetani\nType:Virus\nDisease:Tetanus"
+    "Clostridium Tetani\nType:Virus\nDisease:Tetanus",
+    "Streptococcus pneumoniae\nType:Bacteria\nDisease:Pneumonia"
 ]
 
 microbe_images = [
@@ -146,7 +148,8 @@ microbe_images = [
     'images/microbe_images/phytophthora_infestans.jpg'
     'images/microbe_images/apthovirus.jpg',
     'images/microbe_images/bluetonguevirus.jpg',
-    'images/microbe_images/clostridium.jpg'
+    'images/microbe_images/clostridium.jpg',
+    'images/microbe_images/streptococcuspneumoniae.jpg'
 ]
 
 lost_game = [
@@ -179,6 +182,8 @@ sourcee = [
     'source - some math textbook',
     'source - professor dave explains (youtube)',
     'source - general',
+    'source - professor dave explains (youtube)',
+    'source - professor dave explains (youtube)',
     'source - professor dave explains (youtube)'
 ]
 
@@ -192,7 +197,9 @@ math_probs = [
     'images/math_probs/koinkseven.png',
     'images/math_probs/koinkeight.png',
     'images/math_probs/koinknine.png',
-    'images/math_probs/koinkten.png'
+    'images/math_probs/koinkten.png',
+    'images/math_probs/koinkeleven.png',
+    'images/math_probs/koinktwelve.png'
 ]
 
 
@@ -206,7 +213,9 @@ math_answers=[
     'answer - ||x= 1 or -1||',
     'answer - ||18      ||',
     'answer - ||~0.916 (catalans constant)||',
-    'answer - ||(56/5)π||'
+    'answer - ||(56/5)π||',
+    'answer - ||144.36  ||',
+    'answer - ||45/2    ||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -283,7 +292,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\nℵo-aleph null\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -297,7 +306,7 @@ async def mathprob(ctx):
 
 @client.command()
 async def mathsymbols(ctx):
-    await ctx.send("± - plus or minus symbol\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
+    await ctx.send("± - plus or minus symbol\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\n∇-gradient\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
 
 @client.command()
 async def lcm(ctx, x: int, y: int):
@@ -410,7 +419,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more microbes\nadded new math symbol\nadded a english word\nadded an error exception\n-developer of e-bot (on 25/11/2021)")
+    await ctx.send(f"added more microbes\nadded new math symbols\nadded a english word\nworking on a new command :eyes:\n-developer of e-bot (on 04/12/2021)")
 
 
 @client.command()
