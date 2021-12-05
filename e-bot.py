@@ -39,7 +39,8 @@ wordd = [
     'abberation : a departure from what is normal, usual, or expected, typically an unwelcome one\nExample-they described the outbreak of violence in the area as an aberration',
     'abnegation : the action of renouncing or rejecting something \nExample-abnegation of political power',
     'apathetic : showing or feeling no interest, enthusiasm, or concern.\nExample-an apathetic electorate',
-    'arbitrary :based on random choice or personal whim, rather than any reason or system\nExample-an arbitrary decision'
+    'arbitrary :based on random choice or personal whim, rather than any reason or system\nExample-an arbitrary decision',
+    'arduous :involving or requiring strenuous effort; difficult and tiring\nExample-an arduous journey',
     'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
     'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
     'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
@@ -52,6 +53,7 @@ wordd = [
     'consign : deliver (something) to a persons keeping.\nExample-he consigned three paintings to Sotheby',
     'construed : interpret (a word or action) in a particular way\nExample-his words could hardly be construed as an apology',
     'contusion : a region of injured tissue or skin in which blood capillaries have been ruptured; a bruise\nExample-a dark contusion on his cheek was beginning to swell',
+    'cumbersome : large or heavy and therefore difficult to carry or use; unwieldy.\nExample-cumbersome diving suits',
     'defunct : no longer existing or functioning \nExample - the now defunct Somerset & Dorset railway line',
     'dilatory : slow to act\nExample-he had been dilatory in preparing for his exams',
     'dirge : a mournful song, piece of music, or sound.\nExample-singers chanted dirges',
@@ -65,8 +67,9 @@ wordd = [
     'equanimity : calmness and composure, especially in a difficult situation\nExample-she accepted both the good and the bad with equanimity',
     'exhort : strongly encourage or urge (someone) to do something\nExample-I exhorted her to be a good child',
     'exigent : pressing; demanding\nExample-the exigent demands of her contemporaries music took a toll on her voice',
+    'formidable : inspiring fear or respect through being impressively large, powerful, intense, or capable\nExample-a formidable opponent',
     'gullible : easily persuaded to believe something; credulous.\nExample-an attempt to persuade a gullible public to spend their money',
-    'hierarchy : a system in which members of an organization or society are ranked according to relative status or authority\nExample-the initiative was with those lower down in the hierarchy'
+    'hierarchy : a system in which members of an organization or society are ranked according to relative status or authority\nExample-the initiative was with those lower down in the hierarchy',
     'hoi polloi : the masses; the common people\nExample-the politician decreased the taxes to appease the hoi polloi',
     'ignominious : deserving or causing public disgrace or shame\nExample-no other party risked ignominious defeat',
     'impetuous : acting or done quickly and without thought or care \nExample-she might live to regret this impetuous decision',
@@ -81,9 +84,9 @@ wordd = [
     'munificent : characterized by or displaying great generosity\nExample-a munificent bequest',
     'nonplussed : so surprised and confused that one is unsure how to react.\nExample-Henry looked completely nonplussed',
     'noxious : harmful, poisonous, or very unpleasant\nExample-they were overcome by the noxious fumes',
-    'obdurate : stubbornly refusing to change ones opinion or course of action\nExample-I argued this point with him, but he was obdurate'
+    'obdurate : stubbornly refusing to change ones opinion or course of action\nExample-I argued this point with him, but he was obdurate',
     'paradigm : a typical example or pattern of something,\nExample-The object-oriented paradigm is a new and different way of thinking about programming',
-    'phlegmatic : (of a person) having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character'
+    'phlegmatic : (of a person) having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
     'phlogmatic : having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
     'portent : a sign or warning that a momentous or calamitous event is likely to happen\nExample-many birds are regarded as being portents of death',
     'potenate : a monarch or ruler, especially an autocratic one\nExample-Valdemar was now, after the king of England, the most powerful potentate in the north of Europe',
@@ -92,6 +95,7 @@ wordd = [
     'sacrilege : violation or misuse of what is regarded as sacred\nputting ecclesiastical vestments to secular use was considered sacrilege',
     'saguine : optimistic or positive, especially in an apparently bad or difficult situation\nExample-he is sanguine about prospects for the global economy',
     'staid : sedate, respectable, and unadventurous\nExample-staid law firms',
+    'toilsome : involving hard or tedious work\nExample-toilsome chores',
     'unabashed : not embarrassed, disconcerted, or ashamed\nExample-he was unabashed despite failing in his test',
     'uncanny : strange or mysterious, especially in an unsettling way\nExample-an uncanny feeling that she was being watched',
     'veracity : conformity to facts; accuracy\nExamples-officials expressed doubts concerning the veracity of the story'
@@ -106,23 +110,27 @@ microbes = [
     "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
     "Varicella Zoster virus\nType:virus\nDisease:Chickenpox",
     "Yersinia Pestis\nType:bacteria\nDisease:Black Plague",
-    "Variola virus\nType:virus\nDisease:Smallpox",
+    "Variola Virus\nType:virus\nDisease:Smallpox",
     "Epstein-Barr virus\nType:virus\nDisease:Mononucleosis",
     "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis",
     "Rickettsia Rickettsii\nType:bacteria\nDisease:Rocky Mountain Spotted Fever",
     "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
-    "Influenza virus\nType:virus\nDisease:Flu",
-    "Diplocarpon rosae\nType:fugus\nDisease:Black spot(in plants)",
-    "Mosaic virus\nType:Virus\nDisease:Mosaic disease(in plants)",
+    "Influenza Virus\nType:virus\nDisease:Flu",
+    "Diplocarpon Rosae\nType:fugus\nDisease:Black spot(in plants)",
+    "Mosaic Virus\nType:Virus\nDisease:Mosaic disease(in plants)",
     "Plasmodium Malariae\nType:Protozoa\nDisease:Malaria",
-    "Dengue virus\nType:virus\nDisease:Dengue",
+    "Dengue Virus\nType:virus\nDisease:Dengue",
     "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis",
-    "Stachybotrys chartarum\nType:Fungi\nDisease:Toxic Black Mold(in plants)",
-    "Phytophthora infestans\nType:Fungi\nDisease:Potato Blight(in plants)",
+    "Stachybotrys Chartarum\nType:Fungi\nDisease:Toxic Black Mold(in plants)",
+    "Phytophthora Infestans\nType:Fungi\nDisease:Potato Blight(in plants)",
     "Apthovirus\nType:Virus\nDisease:Food and mouth disease(in cattle)",
     "Bluetongue virus\nType:Virus\nDisease:Food and mouth disease(in ruminants)",
     "Clostridium Tetani\nType:Virus\nDisease:Tetanus",
-    "Streptococcus pneumoniae\nType:Bacteria\nDisease:Pneumonia"
+    "Streptococcus Pneumoniae\nType:Bacteria\nDisease:Pneumonia",
+    "African Swine Virus\nType:Virus\nDisease:African swine fever",
+    "SARS-CoV-2\nType:Virus\nDisease:Covid19",
+    "Nipah Virus\nType:Virus\nDisease:Nipah virus infection",
+    "Hendra Virus\nType:Virus\nDisease:Hendra virus infection"
 ]
 
 microbe_images = [
@@ -149,7 +157,11 @@ microbe_images = [
     'images/microbe_images/apthovirus.jpg',
     'images/microbe_images/bluetonguevirus.jpg',
     'images/microbe_images/clostridium.jpg',
-    'images/microbe_images/streptococcuspneumoniae.jpg'
+    'images/microbe_images/streptococcuspneumoniae.jpg',
+    'images/microbe_images/africanswinefevervirus.jpg',
+    'images/microbe_images/covid19.jpg',
+    'images/microbe_images/nipahvirus.jpg',
+    'images/microbe_images/hendravirus.jpg'
 ]
 
 lost_game = [
@@ -184,7 +196,8 @@ sourcee = [
     'source - general',
     'source - professor dave explains (youtube)',
     'source - professor dave explains (youtube)',
-    'source - professor dave explains (youtube)'
+    'source - professor dave explains (youtube)',
+    'source - michael penn (youtube)'
 ]
 
 math_probs = [
@@ -199,7 +212,8 @@ math_probs = [
     'images/math_probs/koinknine.png',
     'images/math_probs/koinkten.png',
     'images/math_probs/koinkeleven.png',
-    'images/math_probs/koinktwelve.png'
+    'images/math_probs/koinktwelve.png',
+    'images/math_probs/koinkthirteen.png'
 ]
 
 
@@ -215,7 +229,8 @@ math_answers=[
     'answer - ||~0.916 (catalans constant)||',
     'answer - ||(56/5)π||',
     'answer - ||144.36  ||',
-    'answer - ||45/2    ||'
+    'answer - ||45/2    ||',
+    'answer - ||there are no solutions||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -408,7 +423,7 @@ async def extras(ctx):
 
 @client.command()
 async def source(ctx):
-    await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia")
+    await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia\nevents-https://www.gkgigs.com/important-world-international-days/")
 
 @client.command()
 async def bot(ctx):
@@ -419,7 +434,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more microbes\nadded new math symbols\nadded a english word\nworking on a new command :eyes:\n-developer of e-bot (on 04/12/2021)")
+    await ctx.send(f"added more microbes\nadded new math problem\nadded 4 english words\nupdated sources\nworking on a new command :eyes:\n-developer of e-bot (on 06/12/2021)")
 
 
 @client.command()
