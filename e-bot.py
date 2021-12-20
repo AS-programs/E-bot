@@ -312,7 +312,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\nℵo-aleph null\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -326,7 +326,7 @@ async def mathprob(ctx):
 
 @client.command()
 async def mathsymbols(ctx):
-    await ctx.send("± - plus or minus symbol\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\n∇-gradient\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
+    await ctx.send("± - plus or minus symbol\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\nℵo-aleph null\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
 
 @client.command()
 async def lcm(ctx, x: int, y: int):
