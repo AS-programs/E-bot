@@ -219,7 +219,7 @@ math_probs = [
     'images/math_probs/koinktwelve.png',
     'images/math_probs/koinkthirteen.png',
     'images/math_probs/koinkfourteen.png',
-    'image/math_probs/koinkfifteen.png'
+    'images/math_probs/koinkfifteen.png'
 ]
 
 
