@@ -200,7 +200,8 @@ sourcee = [
     'source - professor dave explains (youtube)',
     'source - professor dave explains (youtube)',
     'source - michael penn (youtube)',
-    'source - professor dave explains(youtube)'
+    'source - professor dave explains(youtube)',
+    'source - numberphile'
 ]
 
 math_probs = [
@@ -217,7 +218,8 @@ math_probs = [
     'images/math_probs/koinkeleven.png',
     'images/math_probs/koinktwelve.png',
     'images/math_probs/koinkthirteen.png',
-    'images/math_probs/koinkfourteen.png'
+    'images/math_probs/koinkfourteen.png',
+    'image/math_probs/koinkfifteen.png'
 ]
 
 
@@ -235,7 +237,8 @@ math_answers=[
     'answer - ||144.36  ||',
     'answer - ||45/2    ||',
     'answer - ||there are no solutions||',
-    'answer - ||0.22%||'
+    'answer - ||0.22%||',
+    'answer - ||the question is wrong(see Bertrands Paradox):wink:||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -462,7 +465,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a microbes\nadded a new math problem\nadded more tigonometry commands\n-developer of e-bot (on 20/12/2021)")
+    await ctx.send(f"added a microbes\nadded 2 new math problems\nadded more tigonometry commands\n-developer of e-bot (on 20/12/2021)")
 
 
 @client.command()
