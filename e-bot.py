@@ -130,7 +130,8 @@ microbes = [
     "African Swine Virus\nType:Virus\nDisease:African swine fever",
     "SARS-CoV-2\nType:Virus\nDisease:Covid19",
     "Nipah Virus\nType:Virus\nDisease:Nipah virus infection",
-    "Hendra Virus\nType:Virus\nDisease:Hendra virus infection"
+    "Hendra Virus\nType:Virus\nDisease:Hendra virus infection",
+    "Mycobacterium Avium\nType:Bacteria\nDisease:Johne's disease(in ruminants)"
 ]
 
 microbe_images = [
@@ -161,7 +162,8 @@ microbe_images = [
     'images/microbe_images/africanswinefevervirus.jpg',
     'images/microbe_images/covid19.jpg',
     'images/microbe_images/nipahvirus.jpg',
-    'images/microbe_images/hendravirus.jpg'
+    'images/microbe_images/hendravirus.jpg',
+    'images/microbe_images/mycobacteriumavium.jpg'
 ]
 
 lost_game = [
@@ -197,7 +199,8 @@ sourcee = [
     'source - professor dave explains (youtube)',
     'source - professor dave explains (youtube)',
     'source - professor dave explains (youtube)',
-    'source - michael penn (youtube)'
+    'source - michael penn (youtube)',
+    'source - professor dave explains(youtube)'
 ]
 
 math_probs = [
@@ -213,7 +216,8 @@ math_probs = [
     'images/math_probs/koinkten.png',
     'images/math_probs/koinkeleven.png',
     'images/math_probs/koinktwelve.png',
-    'images/math_probs/koinkthirteen.png'
+    'images/math_probs/koinkthirteen.png',
+    'images/math_probs/koinkfourteen.png'
 ]
 
 
@@ -230,7 +234,8 @@ math_answers=[
     'answer - ||(56/5)π||',
     'answer - ||144.36  ||',
     'answer - ||45/2    ||',
-    'answer - ||there are no solutions||'
+    'answer - ||there are no solutions||',
+    'answer - ||0.22%||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -307,7 +312,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\nℵo-aleph null\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\nℵo-aleph null\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
 
 
 @client.command()
@@ -410,6 +415,29 @@ async def cosec(ctx, x: float):
 async def cot(ctx, x: float):
     await ctx.send(1 / meth.tan(x))
 
+@client.command()
+async def cosh(ctx, x: float):
+    await ctx.send(meth.cosh(x))
+
+@client.command()
+async def acos(ctx, x: float):
+    await ctx.send(meth.acos(x))
+
+@client.command()
+async def asin(ctx, x: float):
+    await ctx.send(meth.asin(x))
+
+@client.command()
+async def sinh(ctx, x: float):
+    await ctx.send(meth.sinh(x))
+
+@client.command()
+async def tanh(ctx, x: float):
+    await ctx.send(meth.atan(x))
+
+@client.command()
+async def atan(ctx, x: float):
+    await ctx.send(meth.tanh(x))
 
 @client.command()
 async def randnum(ctx, x: float, y: float):
@@ -434,7 +462,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added more microbes\nadded new math problem\nadded 4 english words\nupdated sources\nworking on a new command :eyes:\n-developer of e-bot (on 06/12/2021)")
+    await ctx.send(f"added a microbes\nadded a new math problem\nadded more tigonometry commands\n-developer of e-bot (on 20/12/2021)")
 
 
 @client.command()
