@@ -295,7 +295,7 @@ async def game(ctx):
 @client.command()
 async def poll(channelnamee,*,pollmessage):
     amessage=await channelnamee.send(pollmessage)
-    await amessage.add_reaction(":wave:")
+    await amessage.add_reaction("👋")
 
 
 @client.command()
