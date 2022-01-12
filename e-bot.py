@@ -295,7 +295,7 @@ async def game(ctx):
 @client.command()
 async def poll(ctx,channelnamee: discord.TextChannel,*,pollmessage):
     amessage=await channelnamee.send(pollmessage)
-    await amessage.add_reaction("👋")
+    await amessage.add_reaction("✅","❌","🤷")
 
 
 @client.command()
