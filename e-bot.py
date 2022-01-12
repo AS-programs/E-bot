@@ -293,7 +293,7 @@ async def game(ctx):
     await ctx.send('$rps <rock or paper or scissor> (plays a game of rockpaperscissor)')
 
 @client.command()
-async def poll(channelnamee,*,pollmessage):
+async def poll(channelnamee: discord.TextChannel,*,pollmessage):
     amessage=await channelnamee.send(pollmessage)
     await amessage.add_reaction("👋")
 
