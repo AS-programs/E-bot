@@ -4,6 +4,7 @@ from math import gcd as gcdd
 from math import lcm as lcmm
 from math import factorial as factoriall
 import os
+from discord import channel
 import dotenv
 import requests
 import json
@@ -290,6 +291,11 @@ async def fact(ctx):
 @client.command()
 async def game(ctx):
     await ctx.send('$rps <rock or paper or scissor> (plays a game of rockpaperscissor)')
+
+@client.command()
+async def poll(channelnamee,*,pollmessage):
+    amessage=await channelnamee.send(pollmessage)
+    await amessage.add_reaction(":wave:")
 
 
 @client.command()
