@@ -255,7 +255,7 @@ async def on_ready():
 @client.command()
 async def help(ctx):
     await ctx.send(
-        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be in integer form for example-\n``$event 14 6`` gives the events on 14th june. \n$game(shows the game commands) \n$math(shows the math commands)\n$extras")
+        "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be in integer form for example-\n``$event 14 6`` gives the events on 14th june. \n$game(shows the game commands) \n$math(shows the math commands)\n$poll <channel name/channel id> <poll message> \n$extras")
 
 
 @client.command()
@@ -294,7 +294,8 @@ async def game(ctx):
 
 @client.command()
 async def poll(ctx,channelnamee: discord.TextChannel,*,pollmessage):
-    amessage=await channelnamee.send(pollmessage)
+    asker=ctx.user.name
+    amessage=await channelnamee.send(f"```{pollmessage}\nasked by {asker}```")
     await amessage.add_reaction("✅")
     await amessage.add_reaction("❌")
     await amessage.add_reaction("🤷")
@@ -473,7 +474,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a microbes\nadded 2 new math problems\nadded more tigonometry commands\n-developer of e-bot (on 20/12/2021)")
+    await ctx.send(f"added a poll command \n-Developer of ebot(on 12/01/2022)")
 
 
 @client.command()
