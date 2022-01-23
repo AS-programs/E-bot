@@ -202,7 +202,8 @@ sourcee = [
     'source - professor dave explains (youtube)',
     'source - michael penn (youtube)',
     'source - professor dave explains(youtube)',
-    'source - numberphile'
+    'source - numberphile',
+    'source - professor dave explains(youtube)'
 ]
 
 math_probs = [
@@ -220,7 +221,8 @@ math_probs = [
     'images/math_probs/koinktwelve.png',
     'images/math_probs/koinkthirteen.png',
     'images/math_probs/koinkfourteen.png',
-    'images/math_probs/koinkfifteen.png'
+    'images/math_probs/koinkfifteen.png',
+    'images/math_probs/koinksixteen.png'
 ]
 
 
@@ -239,7 +241,8 @@ math_answers=[
     'answer - ||45/2    ||',
     'answer - ||there are no solutions||',
     'answer - ||0.22%||',
-    'answer - ||the question is wrong(see Bertrands Paradox):wink:||'
+    'answer - ||the question is wrong(see Bertrands Paradox):wink:||',
+    'answer - ||22/15||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -474,7 +477,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a poll command \n-Developer of ebot(on 12/01/2022)")
+    await ctx.send(f"added a math problem \n-Developer of ebot(on 23/01/2022)")
 
 
 @client.command()
