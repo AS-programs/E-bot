@@ -132,7 +132,8 @@ microbes = [
     "SARS-CoV-2\nType:Virus\nDisease:Covid19",
     "Nipah Virus\nType:Virus\nDisease:Nipah virus infection",
     "Hendra Virus\nType:Virus\nDisease:Hendra virus infection",
-    "Mycobacterium Avium\nType:Bacteria\nDisease:Johne's disease(in ruminants)"
+    "Mycobacterium Avium\nType:Bacteria\nDisease:Johne's disease(in ruminants)",
+    "Erwinia Tracheiphila\nType:Bacteria\nDisease:Bacterial wilt"
 ]
 
 microbe_images = [
@@ -164,7 +165,8 @@ microbe_images = [
     'images/microbe_images/covid19.jpg',
     'images/microbe_images/nipahvirus.jpg',
     'images/microbe_images/hendravirus.jpg',
-    'images/microbe_images/mycobacteriumavium.jpg'
+    'images/microbe_images/mycobacteriumavium.jpg',
+    'images/microbe_images/erwiniatracheiphila.jpg'
 ]
 
 lost_game = [
@@ -203,7 +205,9 @@ sourcee = [
     'source - michael penn (youtube)',
     'source - professor dave explains(youtube)',
     'source - numberphile',
-    'source - professor dave explains(youtube)'
+    'source - professor dave explains(youtube)',
+    'source - Atomi(youtube)',
+    'source = Atomi(youtube)'
 ]
 
 math_probs = [
@@ -222,7 +226,9 @@ math_probs = [
     'images/math_probs/koinkthirteen.png',
     'images/math_probs/koinkfourteen.png',
     'images/math_probs/koinkfifteen.png',
-    'images/math_probs/koinksixteen.png'
+    'images/math_probs/koinksixteen.png',
+    'images/math_probs/koinkseventeen.png',
+    'images/math_probs/koinkeighteen.png'
 ]
 
 
@@ -242,7 +248,9 @@ math_answers=[
     'answer - ||there are no solutions||',
     'answer - ||0.22%||',
     'answer - ||the question is wrong(see Bertrands Paradox):wink:||',
-    'answer - ||22/15||'
+    'answer - ||22/15||',
+    'answer - ||√2(√3-1)/4 ||',
+    'answer - ||tan x ||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -477,7 +485,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a math problem \n-Developer of ebot(on 23/01/2022)")
+    await ctx.send(f"added a new microbe\nadded 2 math problems\n-developer of e bot(on 30/01/2022)")
 
 
 @client.command()
