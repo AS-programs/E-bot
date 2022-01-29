@@ -249,8 +249,8 @@ math_answers=[
     'answer - ||0.22%||',
     'answer - ||the question is wrong(see Bertrands Paradox):wink:||',
     'answer - ||22/15||',
-    'answer - ||√2(√3-1)/4 ||',
-    'answer - ||tan x ||'
+    'answer - ||tan x ||',
+    'answer - ||√2(√3-1)/4 ||'
 ]
 
 client = commands.Bot(command_prefix='$')
