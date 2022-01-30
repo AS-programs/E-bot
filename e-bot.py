@@ -311,7 +311,6 @@ async def poll(ctx,channelnamee: discord.TextChannel,*,pollmessage):
     await amessage.add_reaction("❌")
     await amessage.add_reaction("🤷")
 
-
 @client.command()
 async def rps(ctx, inputt):
     computer = random.choice(['rock', 'scissor', 'paper'])
