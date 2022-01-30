@@ -298,6 +298,11 @@ async def fact(ctx):
     facts = randfacts.get_fact()
     await ctx.send(facts)
 
+@client.command()
+async def user(ctx,user: discord.User):
+    await ctx.send(f"Name: {user.name}\nDate joined: {user.created_at}\nAvatar: {user.avatar}")
+
+
 
 @client.command()
 async def game(ctx):
