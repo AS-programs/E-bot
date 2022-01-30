@@ -300,7 +300,7 @@ async def fact(ctx):
 
 @client.command()
 async def user(ctx,user: discord.User):
-    await ctx.send(f"```Name: {user.name}\nID: {user.id}\nDate joined: {user.created_at} GMT\nAvatar: {user.avatar_url}```")
+    await ctx.send(f"```Name: {user.name}\nID: {user.id}\nDate joined: {user.created_at} GMT\nAvatar:```\n {user.avatar_url}")
 
 
 
