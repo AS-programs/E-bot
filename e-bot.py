@@ -520,7 +520,7 @@ async def event(ctx, date: int, month: int):
             await ctx.send(f"the international days on {date}/{month} are:-\n World Interfaith Harmony Week")
         elif date == 2:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Wetlands Day")
-        elif date == '04':
+        elif date == 4:
             await ctx.send(
                 f"the international days on {date}/{month} are:-\n International Day of Human Fraternity \n World Cancer Day")
         elif date == 6:
@@ -539,7 +539,7 @@ async def event(ctx, date: int, month: int):
             await ctx.send(f"the international days on {date}/{month} are:-\n International Mother Language Day")
         elif date == 23:
             await ctx.send(f"the international days on {date}/{month} are:-\n World Peace and Understanding Day")
-        elif date > 29 or date < 0 or date != int:
+        elif date > 29 or date < 0:
             await ctx.send("no such dates exist in the given month")
         else:
             await ctx.send(f"no inportant international days on {date}/{month}")
