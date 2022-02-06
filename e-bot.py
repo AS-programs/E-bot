@@ -207,7 +207,8 @@ sourcee = [
     'source - numberphile',
     'source - professor dave explains(youtube)',
     'source - Atomi(youtube)',
-    'source = Atomi(youtube)'
+    'source - Atomi(youtube)',
+    'source - mind your decisions(youtube)'
 ]
 
 math_probs = [
@@ -228,7 +229,8 @@ math_probs = [
     'images/math_probs/koinkfifteen.png',
     'images/math_probs/koinksixteen.png',
     'images/math_probs/koinkseventeen.png',
-    'images/math_probs/koinkeighteen.png'
+    'images/math_probs/koinkeighteen.png',
+    'images/math_probs/koinknineteen.png'
 ]
 
 
@@ -250,7 +252,8 @@ math_answers=[
     'answer - ||the question is wrong(see Bertrands Paradox):wink:||',
     'answer - ||22/15||',
     'answer - ||tan x ||',
-    'answer - ||√2(√3-1)/4 ||'
+    'answer - ||√2(√3-1)/4 ||',
+    'answer - ||2||'
 ]
 
 client = commands.Bot(command_prefix='$')
