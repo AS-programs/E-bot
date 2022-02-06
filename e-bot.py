@@ -492,7 +492,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a math symbol\n-developer of e bot(on 03/02/2022)")
+    await ctx.send(f"added a math problem\n-developer of e bot(on 07/02/2022)")
 
 
 @client.command()
