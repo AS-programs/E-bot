@@ -360,6 +360,8 @@ async def mathsymbols(ctx):
 
 @client.command()
 async def lcm(ctx, x: int, y: int):
+    if type(x) is not float or type(y) is not int:
+        await ctx.send("the given values are not integers bruh :|")
     await ctx.send(lcmm(x,y))
 
 
