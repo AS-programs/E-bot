@@ -368,6 +368,8 @@ async def lcm(ctx, x:int, y:int):
         except ValueError:
             await ctx.send("thie given values are not integers")
             break
+        except OverflowError:
+            await ctx.send("The values entered are too high")
     
 
 
@@ -438,7 +440,7 @@ async def sin(ctx, x: float):
 @client.command()
 async def tan(ctx, x: float):
     await ctx.send(meth.tan(x))
-
+ 
 
 @client.command()
 async def sec(ctx, x: float):
