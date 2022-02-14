@@ -360,17 +360,11 @@ async def mathsymbols(ctx):
     await ctx.send("± - plus or minus symbol\nΦ - phi\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\nℵo-aleph null\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
 
 @client.command()
-async def lcm(ctx, x:int, y:int):
-    while True:
-        try:
-          await ctx.send(lcmm(x,y))
-          break
-        except ValueError:
-            await ctx.send("thie given values are not integers")
-            break
-        except OverflowError:
-            await ctx.send("The values entered are too high")
-    
+async def lcm(ctx, x, y):
+    if x.isdigit() and y.isdigit():
+      await ctx.send(lcmm(int(x), int(y)))
+    else:
+      await ctx.send("the given values are not integers")    
 
 
 
