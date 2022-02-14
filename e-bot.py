@@ -370,18 +370,27 @@ async def lcm(ctx, x, y):
 
 @client.command()
 async def gcd(ctx, x: int, y: int):
-    await ctx.send(gcdd(x,y))
+    if x.isdigit() and y.isdigit():
+     await ctx.send(gcdd(x,y))
+    else:
+     await ctx.send("the given values are not integers")
 
 
 @client.command()
 async def factorial(ctx, x: int):
-    while True:
-        try:
+    if x.isdigit() and x > -1:
+      while True:
+         try:
           await ctx.send(factoriall(x))
           break
-        except OverflowError:
+         except OverflowError:
             await ctx.send("whoops,factorial too high")
             break
+    elif x<0:
+        await ctx.send("cant factorialize negative numbers")
+    else:
+        await ctx.send("the given values are not integers")
+    
 
 
 @client.command()
@@ -497,7 +506,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a math problem\n-developer of e bot(on 07/02/2022)")
+    await ctx.send(f"gave exceptions for some commands\n-developer of e bot(on 15/02/2022)")
 
 
 @client.command()
