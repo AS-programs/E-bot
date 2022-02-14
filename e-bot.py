@@ -1,3 +1,4 @@
+from ast import While
 import discord
 import math as meth
 from math import gcd as gcdd
@@ -359,11 +360,16 @@ async def mathsymbols(ctx):
     await ctx.send("± - plus or minus symbol\nΦ - phi\n≅ - congruency\n≠ - not equal\n° - degree\n× - vector product sign\n÷ - division sign\n≠ - not equal to\n≥,≤,>,< - inequality\n√ - square root \n∝ - proportionality symbol\nφ - golden ratio constant\nε -  Epsilon\ne-euler's number\nℵo-aleph null\ni-imaginary number\ny', y'', dy/dx , ∂/∂x - derivative\n∫ , ∬ , ∭ ,∮ , ∯ , ∰  - integral \n∇ - delta\nδ - delta function\n∞-infinity symbol\nω - omega\nℱ - fourier tranform\n⋂,⋃,⊆,⊂,⊄,⊇,⊃,⊅,Ø,⇒,∀,∃,∄,∴,∵ - set symbols\nℒ - Laplace tranform\nΣ - sigma notation symbol\nπ - pi\nα - alpha\nβ - beta\nγ - gamma\nθ - theta\nΨ - psi\nΩ - omega\nζ(s) - Riemann zeta function")
 
 @client.command()
-async def lcm(ctx, x, y):
-    if type(x) is int and type(y) is int:
-      await ctx.send(lcmm(x,y))
-    else:
-      await ctx.send("the given values are not integers :|")
+async def lcm(ctx, x:int, y:int):
+    while True:
+        try:
+          await ctx.send(lcmm(x,y))
+          break
+        except ValueError:
+            await ctx.send("thie given values are not integers")
+            break
+    
+
 
 
 @client.command()
