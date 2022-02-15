@@ -411,9 +411,9 @@ async def factorial(ctx, x: int):
 
 
 @client.command()
-async def add(ctx, x: float, y: float):
+async def add(ctx, x, y):
     if is_float_or_int(x,y):
-      await ctx.send(x + y)
+      await ctx.send(float(x) + float(y))
     else:
         await ctx.send("the given values are not integers :|")
 
