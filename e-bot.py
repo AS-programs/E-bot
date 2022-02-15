@@ -406,13 +406,16 @@ async def factorial(ctx, x: int):
     elif x<0:
         await ctx.send("cant factorialize negative numbers")
     else:
-        await ctx.send("the given values are not integers")
+        await ctx.send("the given values are not integers :|")
     
 
 
 @client.command()
 async def add(ctx, x: float, y: float):
-    await ctx.send(x + y)
+    if is_float_or_int(x,y):
+      await ctx.send(x + y)
+    else:
+        await ctx.send("the given values are not integers :|")
 
 
 @client.command()
