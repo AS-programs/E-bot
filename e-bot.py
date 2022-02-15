@@ -34,6 +34,14 @@ def is_float_or_int(value1: float or int, value2: float or int) -> bool:
     except ValueError:
         return False
 
+def is_float_or_int_single(value1: float or int) -> bool:
+    try:
+        float(value1)
+        int(value1)
+        return True
+    except ValueError:
+        return False
+
 def is_int(value1: float or int, value2: float or int) -> bool:
     try:
         int(value1)
@@ -41,6 +49,15 @@ def is_int(value1: float or int, value2: float or int) -> bool:
         return True
     except ValueError:
         return False
+
+
+def is_int_single(value1: float or int) -> bool:
+    try:
+        int(value1)
+        return True
+    except ValueError:
+        return False
+
 
 hello_words = [
     'hola',
@@ -394,8 +411,8 @@ async def gcd(ctx, x: int, y: int):
 
 
 @client.command()
-async def factorial(ctx, x: int):
-    if x.isdigit() and x > -1:
+async def factorial(ctx, x):
+    if is_int_single(x) and x>-1:
       while True:
          try:
           await ctx.send(factoriall(x))
@@ -404,7 +421,7 @@ async def factorial(ctx, x: int):
             await ctx.send("whoops,factorial too high")
             break
     elif x<0:
-        await ctx.send("cant factorialize negative numbers")
+        await ctx.send("cant find factorials of negative values :|")
     else:
         await ctx.send("the given values are not integers :|")
     
@@ -419,36 +436,50 @@ async def add(ctx, x, y):
 
 
 @client.command()
-async def subtract(ctx, x: float, y: float):
-    await ctx.send(x - y)
+async def subtract(ctx, x, y):
+    if is_float_or_int(x,y):
+      await ctx.send(float(x) - float(y))
+    else:
+        await ctx.send("the given values are not valid :|")
+
 
 
 @client.command()
-async def multiply(ctx, x: float, y: float):
-    await ctx.send(x * y)
+async def multiply(ctx, x, y):
+    if is_float_or_int(x,y):
+      await ctx.send(float(x) * float(y))
+    else:
+        await ctx.send("the given values are not valid :|")
+
 
 
 @client.command()
-async def divide(ctx, x: float, y: float):
-    while True:
+async def divide(ctx, x, y):
+    if is_float_or_int(x,y):
+      while True:
         try:
             await ctx.send(x / y)
             break
         except ZeroDivisionError:
             await ctx.send("that is not defined :|")
         break
+    else:
+        await ctx.send("the given values are not valid :|")
+
 
 
 @client.command()
-async def exponent(ctx, x: float, y: float):
-    while True:
+async def exponent(ctx, x, y):
+    if is_float_or_int(x,y):
+      while True:
         try:
             await ctx.send(x ** y)
             break
         except OverflowError:
             await ctx.send("exponent too high :|")
             break
-
+    else:
+        await ctx.send("given values are not valid :|")
 
 @client.command()
 async def cos(ctx, x: float):
@@ -526,7 +557,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"gave exceptions for some commands\n-developer of e bot(on 15/02/2022)")
+    await ctx.send(f"gave exceptions for most commands\n-developer of e bot(on 16/02/2022)")
 
 
 @client.command()
