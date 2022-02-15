@@ -24,6 +24,23 @@ def get_quote():
     quote = json_data[0]['q'] + " -" + json_data[0]['a']
     return (quote)
 
+def is_float_or_int(value1: float or int, value2: float or int) -> bool:
+    try:
+        float(value1)
+        int(value1)
+        float(value2)
+        int(value2)
+        return True
+    except ValueError:
+        return False
+
+def is_int(value1: float or int, value2: float or int) -> bool:
+    try:
+        int(value1)
+        int(value2)
+        return True
+    except ValueError:
+        return False
 
 hello_words = [
     'hola',
@@ -361,16 +378,16 @@ async def mathsymbols(ctx):
 
 @client.command()
 async def lcm(ctx, x, y):
-    if x.isdigit() and y.isdigit():
-      await ctx.send(lcmm(int(x), int(y)))
+    if is_int(x,y):
+        await ctx.send(lcmm(int(x),int(y)))
     else:
-      await ctx.send("the given values are not integers")    
+        await ctx.send("the given values are not integers")
 
 
 
 @client.command()
 async def gcd(ctx, x: int, y: int):
-    if x.isdigit() and y.isdigit():
+    if is_int(x,y):
      await ctx.send(gcdd(x,y))
     else:
      await ctx.send("the given values are not integers")
