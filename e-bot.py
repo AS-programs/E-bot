@@ -26,15 +26,15 @@ def get_quote():
 
 def is_float_or_int(value1: float or int, value2: float or int) -> bool:
     try:
-        float(value1)|int(value1)
-        float(value2)|int(value2)
+        float(value1) or int(value1)
+        float(value2) or int(value2)
         return True
     except ValueError:
         return False
 
 def is_float_or_int_single(value1: float or int) -> bool:
     try:
-        float(value1)|int(value1)
+        float(value1) or int(value1)
         return True
     except ValueError:
         return False
