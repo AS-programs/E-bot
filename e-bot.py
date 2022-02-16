@@ -400,9 +400,9 @@ async def lcm(ctx, x, y):
 
 
 @client.command()
-async def gcd(ctx, x: int, y: int):
+async def gcd(ctx, x, y):
     if is_int(x,y):
-     await ctx.send(gcdd(x,y))
+     await ctx.send(gcdd(int(x),int(y)))
     else:
      await ctx.send("the given values are not integers")
 
@@ -412,7 +412,7 @@ async def factorial(ctx, x):
     if is_int_single(x) and int(x)>-1:
       while True:
          try:
-          await ctx.send(factoriall(x))
+          await ctx.send(factoriall(int(x)))
           break
          except OverflowError:
             await ctx.send("whoops,factorial too high")
@@ -455,7 +455,7 @@ async def divide(ctx, x, y):
     if is_float_or_int(x,y):
       while True:
         try:
-            await ctx.send(x / y)
+            await ctx.send(float(x) / float(y))
             break
         except ZeroDivisionError:
             await ctx.send("that is not defined :|")
@@ -470,7 +470,7 @@ async def exponent(ctx, x, y):
     if is_float_or_int(x,y):
       while True:
         try:
-            await ctx.send(x ** y)
+            await ctx.send(float(x) ** float(y))
             break
         except OverflowError:
             await ctx.send("exponent too high :|")
@@ -532,8 +532,9 @@ async def atan(ctx, x: float):
     await ctx.send(meth.tanh(x))
 
 @client.command()
-async def randnum(ctx, x: float, y: float):
-    await ctx.send(random.randint(x, y))
+async def randnum(ctx, x, y):
+    if is_int:
+      await ctx.send(random.randint(int(x), int(y)))
 
 
 @client.command()
