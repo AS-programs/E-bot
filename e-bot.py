@@ -409,7 +409,10 @@ async def gcd(ctx, x, y):
 
 @client.command()
 async def factorial(ctx, x):
-    if is_int_single(x) and int(x)>-1:
+    if is_int_single(x):
+     if int(x) < 0:
+         await ctx.send("cant take factorials of negative values :confused:")
+     else:
       while True:
          try:
           await ctx.send(factoriall(int(x)))
@@ -417,8 +420,6 @@ async def factorial(ctx, x):
          except OverflowError:
             await ctx.send("whoops,factorial too high")
             break
-    elif int(x)<0:
-        await ctx.send("cant find factorials of negative values :|")
     else:
         await ctx.send("the given values are not integers :|")
     
