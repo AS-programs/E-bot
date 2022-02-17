@@ -480,62 +480,100 @@ async def exponent(ctx, x, y):
         await ctx.send("given values are not valid :|")
 
 @client.command()
-async def cos(ctx, x: float):
-    await ctx.send(meth.cos(x))
+async def cos(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.cos(float(x)))
+    else:
+      await ctx.send("The given values are not valid :|")
 
 
 @client.command()
-async def sin(ctx, x: float):
-    await ctx.send(meth.sin(x))
+async def sin(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.sin(float(x)))
+    else:
+      await ctx.send("The given values are not valid :|")
 
 
 @client.command()
-async def tan(ctx, x: float):
-    await ctx.send(meth.tan(x))
+async def tan(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.tan(float(x)))
+    else:
+      await ctx.send("The given values are not valid :|")
  
 
 @client.command()
-async def sec(ctx, x: float):
-    await ctx.send(1 / meth.cos(x))
+async def sec(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(1 / meth.cos(float(x)))
+    else:
+      await ctx.send("The given values are not valid :|")
 
 
 @client.command()
-async def cosec(ctx, x: float):
-    await ctx.send(1 / meth.sin(x))
+async def cosec(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(1 / meth.sin(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 
 @client.command()
-async def cot(ctx, x: float):
-    await ctx.send(1 / meth.tan(x))
+async def cot(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(1 / meth.tan(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def cosh(ctx, x: float):
-    await ctx.send(meth.cosh(x))
+async def cosh(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.cosh(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def acos(ctx, x: float):
-    await ctx.send(meth.acos(x))
+async def acos(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.acos(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def asin(ctx, x: float):
-    await ctx.send(meth.asin(x))
+async def asin(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.asin(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def sinh(ctx, x: float):
-    await ctx.send(meth.sinh(x))
+async def sinh(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.sinh(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def tanh(ctx, x: float):
-    await ctx.send(meth.atan(x))
+async def tanh(ctx, x):
+    if is_float_or_int_single(x):
+      await ctx.send(meth.atan(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
-async def atan(ctx, x: float):
-    await ctx.send(meth.tanh(x))
+async def atan(ctx, x):
+    if is_float_or_int_single:
+      await ctx.send(meth.tanh(float(x)))
+    else:
+        await ctx.send("The given values are not valid :|")
 
 @client.command()
 async def randnum(ctx, x, y):
-    if is_int:
+    if is_int(x,y):
       await ctx.send(random.randint(int(x), int(y)))
+    else:
+        await ctx.send("The given values are not integers :|")
 
 
 @client.command()
@@ -556,7 +594,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"gave exceptions for most commands\n-developer of e bot(on 16/02/2022)")
+    await ctx.send(f"added exceptions for trig commands\n-developer of e bot(on 16/02/2022)")
 
 
 @client.command()
