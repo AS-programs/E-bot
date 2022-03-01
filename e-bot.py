@@ -13,7 +13,8 @@ import random
 import datetime
 from discord.ext import commands
 import randfacts
-
+import matplotlib.pyplot as plt
+import numpy as np
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
@@ -396,6 +397,14 @@ async def lcm(ctx, x, y):
         await ctx.send(lcmm(int(x),int(y)))
     else:
         await ctx.send("the given values are not integers")
+
+@client.command()
+async def graph(ctx):
+    x = np.linspace(-2, 2, 100)
+    y = x ** 2
+    plt.plot(x, y)
+    await ctx.send(file=discord.File(plt))
+    
 
 
 
