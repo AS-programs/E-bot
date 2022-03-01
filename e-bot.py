@@ -182,7 +182,7 @@ microbe_images = [
     'images/microbe_images/mycoacterium_tuberculosis.png',
     'images/microbe_images/rickettsia_rickettsii.png',
     'images/microbe_images/bordetella_pertusis.png',
-    'images/microbe_images/influenza.png',
+    'images/microbe_images/influenza.png',  
     'images/microbe_images/blackspot.png',
     'images/microbe_images/mosaicvirus.png',
     'images/microbe_images/Plasmodiummalariae.jpg',
@@ -399,9 +399,9 @@ async def lcm(ctx, x, y):
         await ctx.send("the given values are not integers")
 
 @client.command()
-async def graph(ctx):
+async def graph(ctx,function:str):
     x = np.linspace(-2, 2, 100)
-    y = x ** 2
+    y = eval(function)
     plt.plot(x, y)
     plt.savefig('graph.png')
     await ctx.send(file=discord.File("graph.png"))
