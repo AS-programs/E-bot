@@ -405,6 +405,7 @@ async def graph(ctx,function:str):
     plt.plot(x, y)
     plt.savefig('graph.png')
     await ctx.send(file=discord.File("graph.png"))
+    plt.clf()
     
 
 
