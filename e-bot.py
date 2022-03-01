@@ -375,7 +375,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)\n$graph <function> (for example ``$graph x**3``)")
 
 
 @client.command()
@@ -403,6 +403,8 @@ async def graph(ctx,function:str):
     x = np.linspace(-2, 2, 100)
     y = eval(function)
     plt.plot(x, y)
+    plt.grid()
+    plt.title(f"Graph for {function}")
     plt.savefig('graph.png')
     await ctx.send(file=discord.File("graph.png"))
     plt.clf()
@@ -605,7 +607,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added exceptions for trig commands\n-developer of e bot(on 16/02/2022)")
+    await ctx.send(f"added a new graph command :eyes:\n-developer of e bot(on 1/03/2022)")
 
 
 @client.command()
