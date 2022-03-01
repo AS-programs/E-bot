@@ -403,7 +403,8 @@ async def graph(ctx):
     x = np.linspace(-2, 2, 100)
     y = x ** 2
     plt.plot(x, y)
-    await ctx.send(file=discord.File(plt))
+    plt.savefig('graph.png')
+    await ctx.send(file=discord.File("graph.png"))
     
 
 
