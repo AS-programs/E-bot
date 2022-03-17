@@ -308,7 +308,11 @@ async def help(ctx):
 
 @client.command()
 async def test(ctx):
-    await ctx.send(trysomething.dosomething())
+    if (ctx.author.id == 819443895665819699):
+      await ctx.send(trysomething.dosomething())
+    else:
+      await ctx.send("ur not authorized to use that :eyes:")
+
 
 
 @client.command()
