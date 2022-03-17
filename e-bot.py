@@ -15,6 +15,7 @@ from discord.ext import commands
 import randfacts
 import matplotlib.pyplot as plt
 import numpy as np
+import trysomething
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
@@ -303,6 +304,11 @@ async def on_ready():
 async def help(ctx):
     await ctx.send(
         "$hello \n$inspire(gives a random quote) \n$fact(gives a random fact)\n$word(gives a random english word)\n$microbe(gives basic information about a random microbe :microbe:) \n$event <date> <month>(gives the international events on given date)\nthe date and month should be in integer form for example-\n``$event 14 6`` gives the events on 14th june.\n$user <user id>(gives some information about the user) \n$game(shows the game commands) \n$math(shows the math commands)\n$poll <channel name/channel id> <poll message> \n$extras")
+
+
+@client.command()
+async def test(ctx):
+    await ctx.send(trysomething.dosomething())
 
 
 @client.command()
