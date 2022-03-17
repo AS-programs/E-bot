@@ -308,8 +308,12 @@ async def help(ctx):
 
 @client.command()
 async def test(ctx):
-    if (ctx.author.id == 819443895665819699):
-      await ctx.send(trysomething.dosomething())
+    if (ctx.author.id == 819443895665819699 or ctx.author.id == 889128890029731880):
+      try:
+          file=open("trysomething.py","w")
+          file.write("def dosomething():\n  return 'works'")
+      finally:
+          file.close()
     else:
       await ctx.send("ur not authorized to use that :eyes:")
 
