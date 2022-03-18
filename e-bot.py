@@ -312,7 +312,7 @@ async def test(ctx,*,code:str):
       try:
           file=open("trysomething.py","w")
           file.write(code)
-          await ctx.send(trysomething.program())
+          await ctx.send(code)
       finally:
           file.close()
     else:
