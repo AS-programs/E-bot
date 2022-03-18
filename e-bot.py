@@ -312,9 +312,10 @@ async def test(ctx,*,code:str):
       try:
           file=open("trysomething.py","w")
           file.write(code)
-          await ctx.send(code)
       finally:
           file.close()
+          await ctx.send(trysomething.program())
+
     else:
       await ctx.send("ur not authorized to use that :eyes:")
 
