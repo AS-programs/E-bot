@@ -1,3 +1,0 @@
-def program():
-    return "works"
-    
