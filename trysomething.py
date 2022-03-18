@@ -1,3 +1,3 @@
-def dosomething():
+def program():
     return "works"
     

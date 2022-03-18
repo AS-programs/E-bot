@@ -307,12 +307,12 @@ async def help(ctx):
 
 
 @client.command()
-async def test(ctx):
+async def test(ctx,code):
     if (ctx.author.id == 819443895665819699 or ctx.author.id == 889128890029731880):
       try:
           file=open("trysomething.py","w")
-          file.write("def dosomething():\n  return 'works'")
-          await ctx.send(trysomething.dosomething())
+          file.write(code)
+          await ctx.send(trysomething.program())
       finally:
           file.close()
     else:
