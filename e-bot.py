@@ -311,9 +311,9 @@ async def test(ctx,*,code:str):
     if (ctx.author.id == 819443895665819699 or ctx.author.id == 889128890029731880):
       try:
           file=open("trysomething.py","w")
-          file.write(code)
+          await file.write(code)
       finally:
-          file.close()
+          await file.close()
           await ctx.send(trysomething.program())
 
     else:

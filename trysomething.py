@@ -1,2 +1,2 @@
 def program():
-    pass
+    return "does not work"
