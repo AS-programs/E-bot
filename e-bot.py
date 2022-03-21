@@ -428,7 +428,7 @@ async def vectorfield(ctx,u:str,v:str):
     x,y = np.meshgrid(np.linspace(-5,5,10),np.linspace(-5,5,10))
     a = eval(u)
     b = eval(v)
-    plt.quiver(x,y,u,v)
+    plt.quiver(x,y,a,b)
     plt.grid()
     plt.title(f"F(x,y)=({u})i+({v})j")
     plt.savefig('vector-field.png')
