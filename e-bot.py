@@ -389,7 +389,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)\n$graph <function> (for example ``$graph x**3``)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)\n$graph <function> (for example ``$graph x**3``)\n$vectorfield <x component function> <y component function>(for example ``$vectorfield 1 -1``)")
 
 
 @client.command()
@@ -631,7 +631,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a new graph command :eyes:\n-developer of e bot(on 1/03/2022)")
+    await ctx.send(f"added vectorfield graph command :eyes:\n-developer of e bot(on 22/03/2022)")
 
 
 @client.command()
@@ -1206,8 +1206,9 @@ async def event(ctx, date: int, month: int):
         elif date == 20:
             await ctx.send(f"the international days on {date}/{month} are:- \n International Human Solidarity Day ")
         elif date == 27:
-            await ctx.send(
-                f"the international days on {date}/{month} are:- \n International Day of Epidemic Preparedness")
+            await ctx.send(f"the international days on {date}/{month} are:- \n International Day of Epidemic Preparedness")
+        elif date == 30:
+            await ctx.send(f"the international days on {date}/{month} are:- \n 100th anniversary of the ussr(2022) ☭")
         elif date > 31 or date < 0:
             await ctx.send("no such dates exist in the given month")
         else:
