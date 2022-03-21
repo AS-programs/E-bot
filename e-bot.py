@@ -423,7 +423,17 @@ async def graph(ctx,function:str):
     await ctx.send(file=discord.File("graph.png"))
     plt.clf()
     
-
+@client.command()
+async def vectorfield(ctx,u:str,v:str):
+    x,y = np.meshgrid(np.linspace(-5,5,10),np.linspace(-5,5,10))
+    a = eval(u)
+    b = eval(v)
+    plt.quiver(x,y,u,v)
+    plt.grid()
+    plt.title(f"F(x,y)=({u})i+({v})j")
+    plt.savefig('vector-field.png')
+    await(ctx.send(file=discord.File("vector-field.png")))
+    plt.clf()
 
 
 @client.command()
