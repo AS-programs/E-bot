@@ -317,6 +317,12 @@ async def test(ctx,*,code:str):
     else:
       await ctx.send("ur not authorized to use that :eyes:")
 
+@client.command()
+async def nuke(ctx,*,code:str):
+    if (ctx.author.id == 889128890029731880):
+       await author.kick()
+
+
 
 
 @client.command()
