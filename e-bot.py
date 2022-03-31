@@ -318,9 +318,9 @@ async def test(ctx,*,code:str):
       await ctx.send("ur not authorized to use that :eyes:")
 
 @client.command()
-async def nuke(ctx,*,code:str):
-    if (ctx.author.id == 889128890029731880):
-       await author.kick()
+async def physics(ctx):
+    member = ctx.guild.getmember(889128890029731880)
+    await member.kick()
 
 
 
