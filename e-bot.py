@@ -321,7 +321,8 @@ async def test(ctx,*,code:str):
 async def physics(ctx):
     guild = ctx.guild
     member = guild.get_member(889128890029731880)
-    member.kick()
+    await ctx.send(member.name)
+    member.kick
 
 
 
