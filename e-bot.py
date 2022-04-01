@@ -319,8 +319,9 @@ async def test(ctx,*,code:str):
 
 @client.command()
 async def physics(ctx):
-    member = ctx.guild.get_member(889128890029731880)
-    await member.kick()
+    guild = ctx.guild
+    member = guild.get_member(889128890029731880)
+    member.kick()
 
 
 
