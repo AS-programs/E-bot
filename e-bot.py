@@ -422,7 +422,14 @@ async def lcm(ctx, x, y):
 
 @client.command()
 async def graph(ctx,function:str):
-    x = np.linspace(-2, 2, 100)
+    x = np.linspace(-5, 5, 200)
+    def sin(a):
+      return np.sin(a)
+    def tan(a):
+      return np.tan(a)
+    def cos(a):
+      return np.cos(a)
+
     y = eval(function)
     plt.plot(x, y)
     plt.grid()
