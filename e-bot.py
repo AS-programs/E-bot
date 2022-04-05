@@ -429,7 +429,12 @@ async def graph(ctx,function:str):
       return np.tan(a)
     def cos(a):
       return np.cos(a)
-
+    def log(a):
+        return np.log10(a)
+    def ln(a):
+        return np.log(a)
+    π=3.1416
+    e=2.7182
     y = eval(function)
     plt.plot(x, y)
     plt.grid()
@@ -438,8 +443,21 @@ async def graph(ctx,function:str):
     await ctx.send(file=discord.File("graph.png"))
     plt.clf()
     
+
 @client.command()
 async def vectorfield(ctx,u:str,v:str):
+    def sin(a):
+      return np.sin(a)
+    def tan(a):
+      return np.tan(a)
+    def cos(a):
+      return np.cos(a)
+    def log(a):
+        return np.log10(a)
+    def ln(a):
+        return np.log(a)
+    π=3.1416
+    e=2.7182
     x,y = np.meshgrid(np.linspace(-5,5,10),np.linspace(-5,5,10))
     a = eval(u)
     b = eval(v)
@@ -646,7 +664,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added vectorfield graph command :eyes:\n-developer of e bot(on 22/03/2022)")
+    await ctx.send(f"added trig and log functions for graphing commands\n-developer of e bot(on 05/04/2022)")
 
 
 @client.command()
