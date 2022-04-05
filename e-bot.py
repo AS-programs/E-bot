@@ -654,7 +654,8 @@ async def extras(ctx):
 @client.command()
 async def source(ctx):
     await ctx.send("$word-English Oxford Dictionary\n$fact-Randfacts package\nmicrobes images-mostly wikipedia\nevents-https://www.gkgigs.com/important-world-international-days/")
-
+ 
+ 
 @client.command()
 async def bot(ctx):
     hm=len(math_probs)
