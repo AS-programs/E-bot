@@ -319,10 +319,7 @@ async def test(ctx,*,code:str):
 
 @client.command()
 async def physics(ctx):
-    guild = ctx.guild
-    member = guild.get_member(889128890029731880)
-    await ctx.send(member.name)
-    member.kick
+    await ctx.send(ctx.guild.get_member(889128890029731880).name)
 
 
 @client.command()
