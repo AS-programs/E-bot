@@ -326,7 +326,6 @@ async def physics(ctx):
 
 
 
-
 @client.command()
 async def hello(ctx):
     await ctx.send(random.choice(hello_words))
