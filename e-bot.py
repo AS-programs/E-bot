@@ -325,7 +325,6 @@ async def physics(ctx):
     member.kick
 
 
-
 @client.command()
 async def hello(ctx):
     await ctx.send(random.choice(hello_words))
