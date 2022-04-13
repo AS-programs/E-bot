@@ -488,7 +488,7 @@ async def contourgraph(ctx,function:str):
   plt.colorbar()
   plt.title(f"f(x,y)={function}")
   plt.savefig('contourgraph.png')
-  await(ctx.send(file=discord.File("vector-field.png")))
+  await(ctx.send(file=discord.File("contourgraph.png")))
   plt.clf()
 
 
