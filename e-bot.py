@@ -392,7 +392,7 @@ async def rps(ctx, inputt):
 
 @client.command()
 async def math(ctx):
-    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)\n$graph <function> (for example ``$graph x**3``)\n$vectorfield <x component function> <y component function>(for example ``$vectorfield 1 -1``)")
+    await ctx.send("$add/subtract/multiply/divide/exponent/gcd/lcm <number 1> <number 2>\n$randnum <number1> <number2> (for example- ``$randnum 5 10`` gives a random number between 5 and 10)(both numbers should be integers)\n$factorial <number> \ntrigonometry comands - $cos/sin/tan/cot/cosec/sec/cosh/sinh/tanh/acos/asin/atan <number>(works in radians)\n$mathprob(gives a random math problem)\n$mathsymbols(gives a list of mathsymbols)\n$graph <function> (for example ``$graph x**3``)\n$vectorfield <x component function> <y component function>(for example ``$vectorfield 1 -1``)\n$contourgraph <function> (for example - ``$contourgraph x+y``) ")
 
 
 @client.command()
@@ -488,6 +488,9 @@ async def contourgraph(ctx,function:str):
   plt.colorbar()
   plt.title(f"f(x,y)={function}")
   plt.savefig('contourgraph.png')
+  await(ctx.send(file=discord.File("vector-field.png")))
+  plt.clf()
+
 
 @client.command()
 async def gcd(ctx, x, y):
@@ -685,7 +688,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added contourgraph command\n-developer of e bot(on 05/04/2022)")
+    await ctx.send(f"added contourgraph command\n-developer of e bot(on 13/04/2022)")
 
 
 @client.command()
