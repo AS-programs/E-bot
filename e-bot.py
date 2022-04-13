@@ -491,6 +491,7 @@ async def contourgraph(ctx,function:str):
   await(ctx.send(file=discord.File("contourgraph.png")))
   plt.clf()
 
+  
 
 @client.command()
 async def gcd(ctx, x, y):
