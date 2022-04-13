@@ -478,8 +478,8 @@ async def contourgraph(ctx,function:str):
         return np.log(a)
   π=3.1416
   e=2.7182
-  a = np.linspace(0, 5, 50)
-  b = np.linspace(0, 5, 40)
+  a = np.linspace(-5, 5, 50)
+  b = np.linspace(-5, 5, 40)
 
   x,y = np.meshgrid(a,b)
   z = eval(function)
