@@ -465,6 +465,31 @@ async def vectorfield(ctx,u:str,v:str):
 
 
 @client.command()
+async def contourgraph(ctx,function:str):
+  def sin(a):
+      return np.sin(a)
+  def tan(a):
+      return np.tan(a)
+  def cos(a):
+      return np.cos(a)
+  def log(a):
+        return np.log10(a)
+  def ln(a):
+        return np.log(a)
+  π=3.1416
+  e=2.7182
+  a = np.linspace(0, 5, 50)
+  b = np.linspace(0, 5, 40)
+
+  x,y = np.meshgrid(a,b)
+  z = eval(function)
+
+  plt.contourf(x,y,z, 20, cmap='RdGy')
+  plt.colorbar()
+  plt.title(f"f(x,y)={function}")
+  plt.savefig('contourgraph.png')
+
+@client.command()
 async def gcd(ctx, x, y):
     if is_int(x,y):
      await ctx.send(gcdd(int(x),int(y)))
@@ -660,7 +685,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added trig and log functions for graphing commands\n-developer of e bot(on 05/04/2022)")
+    await ctx.send(f"added contourgraph command\n-developer of e bot(on 05/04/2022)")
 
 
 @client.command()
