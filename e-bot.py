@@ -117,6 +117,7 @@ wordd = [
     'martinate : a person who demands complete obedience; a strict disciplinarian\nExample-a martinant dictator ruled the kingdom',
     'mores : the essential or characteristic customs and conventions of a society or community\nExample-an offence against social mores',
     'munificent : characterized by or displaying great generosity\nExample-a munificent bequest',
+    'mutiny : refuse to obey the orders of a person in authority\nExample-Thousands of the soldiers mutinied over the non-payment of wages',
     'nonplussed : so surprised and confused that one is unsure how to react.\nExample-Henry looked completely nonplussed',
     'noxious : harmful, poisonous, or very unpleasant\nExample-they were overcome by the noxious fumes',
     'obdurate : stubbornly refusing to change ones opinion or course of action\nExample-I argued this point with him, but he was obdurate',
@@ -127,6 +128,7 @@ wordd = [
     'potenate : a monarch or ruler, especially an autocratic one\nExample-Valdemar was now, after the king of England, the most powerful potentate in the north of Europe',
     'relegate : assign an inferior rank or position to\nExample-they aim to prevent her from being relegated to a secondary role',
     'remiss : lacking care or attention to duty; negligent\nExample-it would be very remiss of me not to pass on that information',
+    'ringleader : a person who initiates or leads an illicit or illegal activity\nExample-The four ringleaders were sentenced to death',
     'sacrilege : violation or misuse of what is regarded as sacred\nputting ecclesiastical vestments to secular use was considered sacrilege',
     'saguine : optimistic or positive, especially in an apparently bad or difficult situation\nExample-he is sanguine about prospects for the global economy',
     'staid : sedate, respectable, and unadventurous\nExample-staid law firms',
@@ -242,7 +244,8 @@ sourcee = [
     'source - professor dave explains(youtube)',
     'source - Atomi(youtube)',
     'source - Atomi(youtube)',
-    'source - mind your decisions(youtube)'
+    'source - mind your decisions(youtube)',
+    'source - professor dave explains(youtube)'
 ]
 
 math_probs = [
@@ -264,7 +267,8 @@ math_probs = [
     'images/math_probs/koinksixteen.png',
     'images/math_probs/koinkseventeen.png',
     'images/math_probs/koinkeighteen.png',
-    'images/math_probs/koinknineteen.png'
+    'images/math_probs/koinknineteen.png',
+    'images/math_probs/koinktwenty.png'
 ]
 
 
@@ -287,7 +291,8 @@ math_answers=[
     'answer - ||22/15||',
     'answer - ||tan x ||',
     'answer - ||√2(√3-1)/4 ||',
-    'answer - ||2||'
+    'answer - ||2||',
+    'answer - ||true||'
 ]
 
 client = commands.Bot(command_prefix='$')
@@ -689,7 +694,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added contourgraph command\n-developer of e bot(on 13/04/2022)")
+    await ctx.send(f"added a math problem and 2 words\n-developer of e bot(on 15/04/2022)")
 
 
 @client.command()
