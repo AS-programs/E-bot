@@ -11,15 +11,24 @@ import requests
 import json
 import random
 import datetime
+from pymongo import MongoClient
 from discord.ext import commands
 import randfacts
 import matplotlib.pyplot as plt
 import numpy as np
 import pymongo
 import trysomething
+
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
+cluster=MongoClient(serverlink)
+db=cluster["E-bot"]
+
+post1 = {"_id":1,"name":"Joseph Stalin"}
+post2 = {"_id":2,"name":"George Washington"}
+collection = db["test"]
+collection.insert_many([post1,post2])
 
 def get_quote():
     response = requests.get("https://zenquotes.io/api/random")
@@ -323,6 +332,13 @@ async def test(ctx,*,code:str):
     else:
       await ctx.send("ur not authorized to use that :eyes:")
 
+@client.command()
+async def testtwo(ctx):
+    results=collection.find({"_id":1})
+    for result in results:
+        await ctx.send(result["name"])
+
+ 
 @client.command()
 async def physics(ctx):
     await ctx.send(ctx.guild.get_member(819443895665819699).name)
