@@ -22,6 +22,7 @@ import trysomething
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
+serverlink = os.getenv('serverlink')
 cluster=MongoClient(serverlink)
 db=cluster["E-bot"]
 
