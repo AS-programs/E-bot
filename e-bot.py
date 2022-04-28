@@ -330,7 +330,8 @@ async def test(ctx,*,code:str):
 
 @client.command()
 async def testtwo(ctx):
-    results=collection.find({"_id":1})
+    collection = db["test"]
+    results=collection.find({"_id":2})
     for result in results:
         await ctx.send(result["name"])
 
