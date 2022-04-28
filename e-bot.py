@@ -15,6 +15,7 @@ from discord.ext import commands
 import randfacts
 import matplotlib.pyplot as plt
 import numpy as np
+import pymongo
 import trysomething
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
