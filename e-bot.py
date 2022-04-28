@@ -26,11 +26,6 @@ serverlink = os.getenv('serverlink')
 cluster=MongoClient(serverlink)
 db=cluster["test"]
 
-post1 = {"_id":1,"name":"Joseph Stalin"}
-post2 = {"_id":2,"name":"George Washington"}
-collection = db["test"]
-collection.insert_many([post1,post2])
-
 def get_quote():
     response = requests.get("https://zenquotes.io/api/random")
     json_data = json.loads(response.text)
