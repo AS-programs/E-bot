@@ -24,7 +24,7 @@ client = commands.Bot(command_prefix='$')
 client.remove_command('help')
 serverlink = os.getenv('serverlink')
 cluster=MongoClient(serverlink)
-db=cluster["E-bot"]
+db=cluster["test"]
 
 post1 = {"_id":1,"name":"Joseph Stalin"}
 post2 = {"_id":2,"name":"George Washington"}
