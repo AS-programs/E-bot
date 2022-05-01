@@ -330,10 +330,11 @@ async def test(ctx,*,code:str):
 
 @client.command()
 async def testtwo(ctx):
-    collection = db["test"]
-    results=collection.find({"_id":2})
-    for result in results:
-        await ctx.send(result["name"])
+    collection = db["words"]
+    numberofwords=collection.count_documents({})
+    x=random.randint(1,numberofwords)
+    result = collection.find({"_id":x})
+    await ctx.send(result["word"],result["meaning"])
 
  
 @client.command()
