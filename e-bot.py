@@ -76,74 +76,6 @@ hello_words = [
     'Bonjour'
 ]
 
-wordd = [
-    'abberation : a departure from what is normal, usual, or expected, typically an unwelcome one\nExample-they described the outbreak of violence in the area as an aberration',
-    'abnegation : the action of renouncing or rejecting something \nExample-abnegation of political power',
-    'apathetic : showing or feeling no interest, enthusiasm, or concern.\nExample-an apathetic electorate',
-    'arbitrary :based on random choice or personal whim, rather than any reason or system\nExample-an arbitrary decision',
-    'arduous :involving or requiring strenuous effort; difficult and tiring\nExample-an arduous journey',
-    'annex : add (territory) to ones own territory by appropriation\nExample-the left bank of the Rhine was annexed by France in 1797',
-    'belittle : dismiss (someone or something) as unimportant\nExample-she belittled his riding skills whenever she could',
-    'beguile : charm or enchant (someone), often in a deceptive way.\nExample-he beguiled the voters with his good looks',
-    'belligerence : aggressive or warlike behaviour.\nExample-The leaders belligerence is dangerously irresponsible',
-    'callous : showing or having an insensitive and cruel disregard for others.\nExample-his callous comments about the murder made me angry',
-    'coagulation : the action or process of a liquid, especially blood, changing to a solid or semi-solid state\nExample-a supplement that inhibits blood coagulation',
-    'cogent : (of an argument or case) clear, logical, and convincing\nExample-they put forward cogent arguments for British membership',
-    'comply : act in accordance with a wish or command\nExample-we are unable to comply with your request',
-    'consensus : a general agreement\nExample-there is a growing consensus that the current regime has failed'
-    'consign : deliver (something) to a persons keeping.\nExample-he consigned three paintings to Sotheby',
-    'construed : interpret (a word or action) in a particular way\nExample-his words could hardly be construed as an apology',
-    'contusion : a region of injured tissue or skin in which blood capillaries have been ruptured; a bruise\nExample-a dark contusion on his cheek was beginning to swell',
-    'cumbersome : large or heavy and therefore difficult to carry or use; unwieldy.\nExample-cumbersome diving suits',
-    'defunct : no longer existing or functioning \nExample - the now defunct Somerset & Dorset railway line',
-    'dilatory : slow to act\nExample-he had been dilatory in preparing for his exams',
-    'dirge : a mournful song, piece of music, or sound.\nExample-singers chanted dirges',
-    'disparate : essentially different in kind; not able to be compared\nExample-they inhabit disparate worlds of thought',
-    'dispel : make (a doubt, feeling, or belief) disappear\nExample-The breeze dispelled the bad odor',
-    'ecclesiastical : relating to the Christian Church or its clergy\nexample-the ecclesiastical hierarchy',
-    'embezzlement : theft or misappropriation of funds placed in ones trust or belonging to ones employer\nExample-charges of fraud and embezzlement',
-    'emulate : match or surpass (a person or achievement)\nExample-most rulers wished to emulate Alexander the Great',
-    'enervate : make (someone) feel drained of energy or vitality\nExample-the heat enervated us all',
-    'enormity : the scale or extent of something percieved as bad or morally wrong\nExample-a thorough search disclosed the full enormity of the crime',
-    'equanimity : calmness and composure, especially in a difficult situation\nExample-she accepted both the good and the bad with equanimity',
-    'exhort : strongly encourage or urge (someone) to do something\nExample-I exhorted her to be a good child',
-    'exigent : pressing; demanding\nExample-the exigent demands of her contemporaries music took a toll on her voice',
-    'formidable : inspiring fear or respect through being impressively large, powerful, intense, or capable\nExample-a formidable opponent',
-    'gullible : easily persuaded to believe something; credulous.\nExample-an attempt to persuade a gullible public to spend their money',
-    'hierarchy : a system in which members of an organization or society are ranked according to relative status or authority\nExample-the initiative was with those lower down in the hierarchy',
-    'hoi polloi : the masses; the common people\nExample-the politician decreased the taxes to appease the hoi polloi',
-    'ignominious : deserving or causing public disgrace or shame\nExample-no other party risked ignominious defeat',
-    'impetuous : acting or done quickly and without thought or care \nExample-she might live to regret this impetuous decision',
-    'inane : lacking sense or meaning; silly\nExample-dont badger people with inane questions',
-    'inchoate : just begun so not yet fully developed\nExample-a still inchoate democracy',
-    'indefatigable : persisting continuosly and tirelessly\nExample-an indefatigable defender of human rights',
-    'indict : formally accuse of or charge with a crime\nExample-his former manager was indicted for fraud',
-    'infringe : actively break the terms of (a law, agreement, etc.) \nExample-making an unauthorized copy would infringe copyright',
-    'inveterate : having a particular habit, activity, or interest that is long-established and unlikely to change\nExample-an inveterate gambler ',
-    'martinate : a person who demands complete obedience; a strict disciplinarian\nExample-a martinant dictator ruled the kingdom',
-    'mores : the essential or characteristic customs and conventions of a society or community\nExample-an offence against social mores',
-    'munificent : characterized by or displaying great generosity\nExample-a munificent bequest',
-    'mutiny : refuse to obey the orders of a person in authority\nExample-Thousands of the soldiers mutinied over the non-payment of wages',
-    'nonplussed : so surprised and confused that one is unsure how to react.\nExample-Henry looked completely nonplussed',
-    'noxious : harmful, poisonous, or very unpleasant\nExample-they were overcome by the noxious fumes',
-    'obdurate : stubbornly refusing to change ones opinion or course of action\nExample-I argued this point with him, but he was obdurate',
-    'paradigm : a typical example or pattern of something,\nExample-The object-oriented paradigm is a new and different way of thinking about programming',
-    'phlegmatic : (of a person) having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
-    'phlogmatic : having an unemotional and stolidly calm disposition\nExample-the phlegmatic British character',
-    'portent : a sign or warning that a momentous or calamitous event is likely to happen\nExample-many birds are regarded as being portents of death',
-    'potenate : a monarch or ruler, especially an autocratic one\nExample-Valdemar was now, after the king of England, the most powerful potentate in the north of Europe',
-    'relegate : assign an inferior rank or position to\nExample-they aim to prevent her from being relegated to a secondary role',
-    'remiss : lacking care or attention to duty; negligent\nExample-it would be very remiss of me not to pass on that information',
-    'ringleader : a person who initiates or leads an illicit or illegal activity\nExample-The four ringleaders were sentenced to death',
-    'sacrilege : violation or misuse of what is regarded as sacred\nputting ecclesiastical vestments to secular use was considered sacrilege',
-    'saguine : optimistic or positive, especially in an apparently bad or difficult situation\nExample-he is sanguine about prospects for the global economy',
-    'staid : sedate, respectable, and unadventurous\nExample-staid law firms',
-    'toilsome : involving hard or tedious work\nExample-toilsome chores',
-    'unabashed : not embarrassed, disconcerted, or ashamed\nExample-he was unabashed despite failing in his test',
-    'uncanny : strange or mysterious, especially in an unsettling way\nExample-an uncanny feeling that she was being watched',
-    'veracity : conformity to facts; accuracy\nExamples-officials expressed doubts concerning the veracity of the story'
-
-]
 
 microbes = [
     "Rhinovirus\nType:virus\nDisease:Common cold",
@@ -328,18 +260,9 @@ async def test(ctx,*,code:str):
     else:
       await ctx.send("ur not authorized to use that :eyes:")
 
-@client.command()
-async def testtwo(ctx):
-    collection = db["words"]
-    numberofwords=collection.count_documents({})
-    x=random.randint(1,numberofwords)
-    results = collection.find({"_id":x})
-    for result in results:
-        await ctx.send(f'{result["word"]}-{result["meaning"]}\n{result["example"]}')
-
  
 @client.command()
-async def physics(ctx):
+async def testtwo(ctx):
     await ctx.send(ctx.guild.get_member(819443895665819699).name)
 
 
@@ -356,7 +279,12 @@ async def inspire(ctx):
 
 @client.command()
 async def word(ctx):
-    await ctx.send(random.choice(wordd))
+    collection = db["words"]
+    numberofwords=collection.count_documents({})
+    x=random.randint(1,numberofwords)
+    results = collection.find({"_id":x})
+    for result in results:
+        await ctx.send(f'{result["word"]}-{result["meaning"]}\n{result["example"]}')
 
 
 @client.command()
@@ -449,6 +377,7 @@ async def graph(ctx,function:str):
         return np.log10(a)
     def ln(a):
         return np.log(a)
+    pi=3.1416
     π=3.1416
     e=2.7182
     y = eval(function)
@@ -472,6 +401,7 @@ async def vectorfield(ctx,u:str,v:str):
         return np.log10(a)
     def ln(a):
         return np.log(a)
+    pi=3.1416
     π=3.1416
     e=2.7182
     x,y = np.meshgrid(np.linspace(-5,5,10),np.linspace(-5,5,10))
@@ -497,6 +427,7 @@ async def contourgraph(ctx,function:str):
         return np.log10(a)
   def ln(a):
         return np.log(a)
+  pi=3.1416
   π=3.1416
   e=2.7182
   a = np.linspace(-5, 5, 50)
@@ -710,7 +641,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"added a math problem and 2 words\n-developer of e bot(on 15/04/2022)")
+    await ctx.send(f"connected ebot to mongodb datbase,working on moving data to mongodb\n-developer of e bot(on 2/05/2022)")
 
 
 @client.command()
