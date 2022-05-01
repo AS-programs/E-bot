@@ -335,8 +335,7 @@ async def testtwo(ctx):
     x=random.randint(1,numberofwords)
     results = collection.find({"_id":x})
     for result in results:
-        await ctx.send(result["word"])
-        await ctx.send(result["meaning"])
+        await ctx.send(f'{result["word"]}-{result["meaning"]}')
 
  
 @client.command()
