@@ -578,7 +578,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"connected ebot to mongodb datbase,working on moving data to mongodb\n-developer of e bot(on 2/05/2022)")
+    await ctx.send(f"moved word and microbe command data to database :thumbsup:\n-developer of e bot(on 03/05/2022)")
 
 
 @client.command()
