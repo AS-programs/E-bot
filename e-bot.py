@@ -77,72 +77,6 @@ hello_words = [
 ]
 
 
-microbes = [
-    "Rhinovirus\nType:virus\nDisease:Common cold",
-    "HIV(Human Immunodeficiency Virus)\nType:virus\nDisease:AIDS(Acquired Immunodeficiency Disease)",
-    "Salmonella Typhi\nType:bacteria\nDisease:Typhoid",
-    "Vibrio Cholerae\nType:Bacteria\nDisease:Cholera",
-    "Bacillus Anthracis\nType:Bacteria\nDisease:Anthrax",
-    "Varicella Zoster virus\nType:virus\nDisease:Chickenpox",
-    "Yersinia Pestis\nType:bacteria\nDisease:Black Plague",
-    "Variola Virus\nType:virus\nDisease:Smallpox",
-    "Epstein-Barr virus\nType:virus\nDisease:Mononucleosis",
-    "Mycobacterium Tuberculsosis\nType:bacteria\nDisease:Tuberculosis",
-    "Rickettsia Rickettsii\nType:bacteria\nDisease:Rocky Mountain Spotted Fever",
-    "Bordetella Pertussis\nType:bacteria\nDisease:Whooping Cough",
-    "Influenza Virus\nType:virus\nDisease:Flu",
-    "Diplocarpon Rosae\nType:fugus\nDisease:Black spot(in plants)",
-    "Mosaic Virus\nType:Virus\nDisease:Mosaic disease(in plants)",
-    "Plasmodium Malariae\nType:Protozoa\nDisease:Malaria",
-    "Dengue Virus\nType:virus\nDisease:Dengue",
-    "Cryptospordium\nType:Protozoa\nDisease:Cryptospordiosis",
-    "Stachybotrys Chartarum\nType:Fungi\nDisease:Toxic Black Mold(in plants)",
-    "Phytophthora Infestans\nType:Fungi\nDisease:Potato Blight(in plants)",
-    "Apthovirus\nType:Virus\nDisease:Food and mouth disease(in cattle)",
-    "Bluetongue virus\nType:Virus\nDisease:Food and mouth disease(in ruminants)",
-    "Clostridium Tetani\nType:Virus\nDisease:Tetanus",
-    "Streptococcus Pneumoniae\nType:Bacteria\nDisease:Pneumonia",
-    "African Swine Virus\nType:Virus\nDisease:African swine fever",
-    "SARS-CoV-2\nType:Virus\nDisease:Covid19",
-    "Nipah Virus\nType:Virus\nDisease:Nipah virus infection",
-    "Hendra Virus\nType:Virus\nDisease:Hendra virus infection",
-    "Mycobacterium Avium\nType:Bacteria\nDisease:Johne's disease(in ruminants)",
-    "Erwinia Tracheiphila\nType:Bacteria\nDisease:Bacterial wilt"
-]
-
-microbe_images = [
-    'images/microbe_images/rhinovirus.png',
-    'images/microbe_images/hiv.png',
-    'images/microbe_images/salmonellatyphi.png',
-    'images/microbe_images/vibrio_cholerae.png',
-    'images/microbe_images/bacillus_anthracis.png',
-    'images/microbe_images/varicella_zoster.png',
-    'images/microbe_images/yersinia_pestis.png',
-    'images/microbe_images/variola_virus.png',
-    'images/microbe_images/epstein_virus.png',
-    'images/microbe_images/mycoacterium_tuberculosis.png',
-    'images/microbe_images/rickettsia_rickettsii.png',
-    'images/microbe_images/bordetella_pertusis.png',
-    'images/microbe_images/influenza.png',  
-    'images/microbe_images/blackspot.png',
-    'images/microbe_images/mosaicvirus.png',
-    'images/microbe_images/Plasmodiummalariae.jpg',
-    'images/microbe_images/Denguevirus.jpg',
-    'images/microbe_images/cryptosporidiummuris.jpg',
-    'images/microbe_images/stachybotrys.jpg',
-    'images/microbe_images/phytophthora_infestans.jpg'
-    'images/microbe_images/apthovirus.jpg',
-    'images/microbe_images/bluetonguevirus.jpg',
-    'images/microbe_images/clostridium.jpg',
-    'images/microbe_images/streptococcuspneumoniae.jpg',
-    'images/microbe_images/africanswinefevervirus.jpg',
-    'images/microbe_images/covid19.jpg',
-    'images/microbe_images/nipahvirus.jpg',
-    'images/microbe_images/hendravirus.jpg',
-    'images/microbe_images/mycobacteriumavium.jpg',
-    'images/microbe_images/erwiniatracheiphila.jpg'
-]
-
 lost_game = [
     'noooooooooooo i lost',
     'damm it u won',
@@ -281,7 +215,7 @@ async def inspire(ctx):
 async def word(ctx):
     collection = db["words"]
     numberofwords=collection.count_documents({})
-    x=random.randint(1,numberofwords)
+    x=random.randint(0,numberofwords)
     results = collection.find({"_id":x})
     for result in results:
         await ctx.send(f'{result["word"]}-{result["meaning"]}\n{result["example"]}')
@@ -289,10 +223,13 @@ async def word(ctx):
 
 @client.command()
 async def microbe(ctx):
-    x = len(microbes)
-    y = random.randint(0, x - 1)
-    await ctx.send(microbes[y])
-    await ctx.send(file=discord.File(microbe_images[y]))
+    collection = db["microbes"]
+    numberofmicrobes=collection.count_documents({})
+    x=random.randint(0,numberofmicrobes)
+    results = collection.find({"_id":x})
+    for result in results:
+        await ctx.send(f'{result["microbename"]}\n{result["microbetype"]}\n{result["microbedisease"]}')
+        await ctx.send(file=discord.File(result["microbefilelocation"]))
 
 
 @client.command()
