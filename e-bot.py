@@ -507,9 +507,12 @@ async def source(ctx):
  
 @client.command()
 async def bot(ctx):
-    hm=len(math_probs)
-    hmm=len(wordd)
-    hmmm=len(microbes)
+    collection1 = db["mathsproblem"]
+    collection2 = db["words"]
+    collection3 = db["microbes"]
+    hm=collection1.count_documents({})
+    hmm=collection2.count_documents({})
+    hmmm=collection3.count_documents({})
     await ctx.send(f"Hello i am e-bot\ni was made in python (discord.py)\nnumber of mathproblems for mathprob command - {hm}\nnumber of words in word command - {hmm}\nnumber of microbes in microbe command - {hmmm}")
 
 @client.command()
