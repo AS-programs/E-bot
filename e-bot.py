@@ -12,7 +12,7 @@ import json
 import random
 import datetime
 from pymongo import MongoClient
-from discord.ext import commands
+from discord import commands
 import randfacts
 import matplotlib.pyplot as plt
 import numpy as np
@@ -97,75 +97,6 @@ tie_game = [
     'no one won'
 ]
 
-sourcee = [
-    'source - mind your decisions (youtube)',
-    'source - michael penn (youtube)',
-    'source - michael penn (youtube)',
-    'source - general question',
-    'source - some math textbook',
-    'source - michael penn (youtube)',
-    'source - some math textbook',
-    'source - professor dave explains (youtube)',
-    'source - general',
-    'source - professor dave explains (youtube)',
-    'source - professor dave explains (youtube)',
-    'source - professor dave explains (youtube)',
-    'source - michael penn (youtube)',
-    'source - professor dave explains(youtube)',
-    'source - numberphile',
-    'source - professor dave explains(youtube)',
-    'source - Atomi(youtube)',
-    'source - Atomi(youtube)',
-    'source - mind your decisions(youtube)',
-    'source - professor dave explains(youtube)'
-]
-
-math_probs = [
-    'images/math_probs/koink.png',
-    'images/math_probs/koinktwo.png',
-    'images/math_probs/koinkthree.png',
-    'images/math_probs/koinkfour.png',
-    'images/math_probs/koinkfive.png',
-    'images/math_probs/koinksix.png',
-    'images/math_probs/koinkseven.png',
-    'images/math_probs/koinkeight.png',
-    'images/math_probs/koinknine.png',
-    'images/math_probs/koinkten.png',
-    'images/math_probs/koinkeleven.png',
-    'images/math_probs/koinktwelve.png',
-    'images/math_probs/koinkthirteen.png',
-    'images/math_probs/koinkfourteen.png',
-    'images/math_probs/koinkfifteen.png',
-    'images/math_probs/koinksixteen.png',
-    'images/math_probs/koinkseventeen.png',
-    'images/math_probs/koinkeighteen.png',
-    'images/math_probs/koinknineteen.png',
-    'images/math_probs/koinktwenty.png'
-]
-
-
-math_answers=[
-    'answer- ||90 ||',
-    'answer - ||n=2,3||',
-    'answer - ||12-4e||',
-    'answer - ||π     ||',
-    'answer - ||root π||',
-    'answer - ||ln(e^x/(e^x+1))||',
-    'answer - ||x= 1 or -1||',
-    'answer - ||18      ||',
-    'answer - ||~0.916 (catalans constant)||',
-    'answer - ||(56/5)π||',
-    'answer - ||144.36  ||',
-    'answer - ||45/2    ||',
-    'answer - ||there are no solutions||',
-    'answer - ||0.22%||',
-    'answer - ||the question is wrong(see Bertrands Paradox):wink:||',
-    'answer - ||22/15||',
-    'answer - ||tan x ||',
-    'answer - ||√2(√3-1)/4 ||',
-    'answer - ||2||',
-    'answer - ||true||'
-]
 
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
@@ -283,11 +214,16 @@ async def math(ctx):
 
 @client.command()
 async def mathprob(ctx):
-    x = len(math_probs)
-    y = random.randint(0, x - 1)
-    await ctx.send(sourcee[y])
-    await ctx.send(file=discord.File(math_probs[y]))
-    await ctx.send(math_answers[y])
+    collection = db["mathsproblem"]
+    numberofwords=collection.count_documents({})
+    x=random.randint(0,numberofwords)
+    results = collection.find({"_id":x})
+    
+    for result in results:
+        await ctx.send(f'{result["source"]}\n{result["answer"]}')
+        await ctx.send(file=discord.File(result["location"]))   
+    
+    
 
 
 @client.command()
@@ -578,7 +514,7 @@ async def bot(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send(f"moved word and microbe command data to database :thumbsup:\n-developer of e bot(on 03/05/2022)")
+    await ctx.send(f"moved mathprob command data to database :thumbsup:\n-developer of e bot(on 08/05/2022)")
 
 
 @client.command()
