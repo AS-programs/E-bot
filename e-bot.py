@@ -12,7 +12,7 @@ import json
 import random
 import datetime
 from pymongo import MongoClient
-from discord import commands
+from discord.ext import commands
 import randfacts
 import matplotlib.pyplot as plt
 import numpy as np
