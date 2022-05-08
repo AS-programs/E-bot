@@ -18,7 +18,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pymongo
 import trysomething
-
+   
+   
 dotenv.load_dotenv()
 client = commands.Bot(command_prefix='$')
 client.remove_command('help')
