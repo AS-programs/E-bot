@@ -234,10 +234,10 @@ async def guesstherocket(ctx):
     for result in results:
         await ctx.send(f'1){result["option1"]}\n2){result["option2"]}\n3){result["option3"]}\n4){result["option4"]}')
         message=await ctx.send(file=discord.File(result["imagelocation"]))
-        message.add_reaction("1️⃣")
-        message.add_reaction("2️⃣")
-        message.add_reaction("3️⃣")
-        message.add_reaction("4️⃣")
+        await message.add_reaction("1️⃣")
+        await message.add_reaction("2️⃣")
+        await message.add_reaction("3️⃣")
+        await message.add_reaction("4️⃣")
     
 
 
