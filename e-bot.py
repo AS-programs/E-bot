@@ -222,8 +222,22 @@ async def mathprob(ctx):
     
     for result in results:
         await ctx.send(f'{result["source"]}\n{result["answer"]}')
-        await ctx.send(file=discord.File(result["location"]))   
-    
+        await ctx.send(file=discord.File(result["location"]))
+
+
+@client.command()
+async def guesstherocket(ctx):
+    collection=db["rockets"]
+    numberofrockets=collection.count_documents({})
+    x=random.randint(0,numberofrockets)
+    results = collection.find({"_id":x})
+    for result in results:
+        await ctx.send(f'1){result["option1"]}\n2){result["option2"]}\n3){result["option3"]}\n4){result["option4"]}')
+        message=await ctx.send(file=discord.File(result["imagelocation"]))
+        message.add_reaction("1️⃣")
+        message.add_reaction("2️⃣")
+        message.add_reaction("3️⃣")
+        message.add_reaction("4️⃣")
     
 
 
