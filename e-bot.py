@@ -238,6 +238,8 @@ async def guesstherocket(ctx):
         await message.add_reaction("2️⃣")
         await message.add_reaction("3️⃣")
         await message.add_reaction("4️⃣")
+    for reaction in message.reactions:
+        await ctx.send("noted")
     
 
 
