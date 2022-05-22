@@ -239,9 +239,9 @@ async def guesstherocket(ctx):
         await message.add_reaction("2️⃣")
         await message.add_reaction("3️⃣")
         await message.add_reaction("4️⃣")
-    for reaction in message.reactions:
-        await ctx.send("noted")
-
+    reaction, user = await client.wait_for('reaction_add', timeout=60.0, check=check)
+    if reaction.emoji == "1️⃣":
+        await ctx.send("test successful")
 
 @client.event
 async def on_message(message):
