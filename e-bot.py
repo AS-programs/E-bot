@@ -239,9 +239,16 @@ async def guesstherocket(ctx):
         await message.add_reaction("2️⃣")
         await message.add_reaction("3️⃣")
         await message.add_reaction("4️⃣")
-    reaction, user = await client.wait_for('reaction_add', timeout=60.0, check=check)
-    if reaction.emoji == "1️⃣":
-        await ctx.send("test successful")
+    reaction, user = await client.wait_for("reaction_add", timeout=60.0, check=check)
+    if str(reaction) == "1️⃣":
+       await ctx.send("You reacted with 1!")
+    elif str(reaction) == "2️⃣":
+       await ctx.send("You reacted with 2!")
+    elif str(reaction) == "3️⃣":
+       await ctx.send("You reacted with 3!")
+    elif str(reaction) == "4️⃣":
+       await ctx.send("You reacted with 4!")
+    
 
 @client.event
 async def on_message(message):

@@ -29,3 +29,4 @@ typing-extensions==3.10.0.2
 urllib3==1.26.7
 yarl==1.6.3
 zope.interface==5.4.0
+asyncio-3.4.3
