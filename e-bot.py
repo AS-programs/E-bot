@@ -226,6 +226,7 @@ async def mathprob(ctx):
         await ctx.send(file=discord.File(result["location"]))
 
 
+
 @client.command()
 async def guesstherocket(ctx):
     collection=db["rockets"]
